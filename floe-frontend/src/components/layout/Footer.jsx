@@ -3,9 +3,12 @@ export default function Footer() {
     <footer className="mt-20 border-t border-black/10 bg-sand/70">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="text-sm uppercase tracking-[0.35em] text-black/60">
-            Floe Studio
-          </p>
+          <div className="flex items-center gap-2">
+            <img src="/lo.png" alt="FLOÉ Icon" className="h-6 w-auto object-contain" />
+            <p className="text-sm uppercase tracking-[0.35em] text-black/60">
+              FLOÉ Studio
+            </p>
+          </div>
           <h3 className="mt-3 text-2xl font-display text-black">
             Floral accessories for the modern wardrobe.
           </h3>
@@ -49,7 +52,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-black/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs uppercase tracking-[0.3em] text-black/50 sm:flex-row">
-          <span>2026 Floe Studio</span>
+          <span>2026 FLOÉ Studio</span>
           <span>Instagram · Pinterest · TikTok</span>
         </div>
       </div>
