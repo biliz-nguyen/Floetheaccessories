@@ -4,22 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#1f1b1d",
-        sand: "#f8f3ec",
-        clay: "#e7d7cc",
-        blush: "#eac1b7",
-        sage: "#a7b7a3",
-        gold: "#c9a227",
-        mist: "#f3ede6",
-        midnight: "#2c2a30"
+        paper: "#FBF7F1",
+        paperWarm: "#F4ECE2",
+        ink: "#231C20",
+        inkMuted: "#6F6268",
+        blush: "#F2CDD8",
+        blushStrong: "#E7AFC0",
+        mint: "#CDE5D8",
+        mintStrong: "#9FC9B4",
+        petal: "#FFF0F4",
+        line: "rgba(35, 28, 32, 0.14)",
+        white: "#FFFFFF",
+        sand: "#FBF7F1",
+        clay: "#F4ECE2",
+        sage: "#CDE5D8",
+        mist: "#FFF0F4",
+        midnight: "#231C20"
       },
       fontFamily: {
         display: ["Cormorant Garamond", "serif"],
         body: ["Sora", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 20px 60px rgba(26, 23, 20, 0.12)",
-        lift: "0 14px 30px rgba(26, 23, 20, 0.12)"
+        soft: "0 20px 60px rgba(35, 28, 32, 0.10)",
+        lift: "0 14px 30px rgba(35, 28, 32, 0.12)",
+        print: "0 14px 40px rgba(35, 28, 32, 0.08)"
       }
     }
   },
