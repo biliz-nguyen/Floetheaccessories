@@ -1,15 +1,7 @@
 export const products = []
 
 export const productContentStatus = {
-  emptyTitle: "Đang chờ mẫu sản phẩm đã duyệt",
+  emptyTitle: "Bộ sưu tập đầu tiên đang dần hé nở.",
   emptyDescription:
-    "Floé chưa cung cấp tên mẫu, ảnh sản phẩm, chất liệu và trạng thái còn hàng để đưa lên website. Nội dung này được ghi trong CONTENT_TODO.md thay vì dùng dữ liệu giả.",
-  requiredFields: [
-    "Tên mẫu",
-    "Mã mẫu",
-    "Dòng sản phẩm",
-    "Ảnh sản phẩm",
-    "Ghi chú chất liệu/màu sắc đã xác nhận",
-    "Trạng thái hiển thị nếu Floé muốn công bố"
-  ]
+    "Theo dõi Floé để xem những thiết kế mới nhất, hoặc nhắn Floé để được tư vấn theo vibe bạn yêu thích."
 }

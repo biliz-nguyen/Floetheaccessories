@@ -23,14 +23,14 @@ export const customProcess = [
   {
     id: "handmade",
     number: "04",
-    action: "Hoàn thiện thủ công",
+    action: "Hoàn thiện thiết kế",
     customerPrepares: "Xác nhận hướng thiết kế cuối cùng với Floé.",
     floeReturns: "Thiết kế được làm bằng tay theo brief đã thống nhất."
   },
   {
     id: "deliver",
     number: "05",
-    action: "Giao thiết kế đến bạn",
+    action: "Gửi món phụ kiện đến bạn",
     customerPrepares: "Thông tin nhận hàng khi Floé xác nhận đơn qua kênh tư vấn.",
     floeReturns: "Món phụ kiện hoàn thiện cùng hướng dẫn trao đổi trực tiếp."
   }

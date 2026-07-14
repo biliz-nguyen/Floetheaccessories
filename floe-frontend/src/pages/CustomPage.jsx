@@ -37,13 +37,13 @@ export default function CustomPage() {
             </a>
           </div>
         </div>
-        <div className="asset-placeholder rounded-[24px] p-5">
-          <div className="flex min-h-80 flex-col justify-end rounded-[18px] bg-paper/80 p-5">
-            <p className="text-sm font-semibold text-ink">Cần ảnh quy trình custom thật</p>
-            <p className="mt-2 text-sm leading-6 text-inkMuted">
-              Dùng ảnh phác thảo, chọn chất liệu hoặc hoàn thiện thủ công khi Floé cung cấp.
-            </p>
-          </div>
+        <div className="overflow-hidden rounded-[24px] border border-ink/10 bg-petal shadow-print">
+          <img
+            src="/media/brand/custom-design.webp"
+            alt="Artwork Floé giới thiệu dịch vụ thiết kế phụ kiện theo ý tưởng riêng"
+            className="h-full min-h-80 w-full object-cover"
+            loading="eager"
+          />
         </div>
       </section>
 
@@ -78,7 +78,7 @@ export default function CustomPage() {
         <div>
           <h2 className="text-5xl font-display text-ink">Idea brief để gửi Floé</h2>
           <p className="mt-4 text-base leading-7 text-inkMuted">
-            Website không dùng form giả. Bạn có thể sao chép checklist này rồi gửi trực tiếp cho Floé qua fanpage hoặc email.
+            Sao chép checklist này rồi gửi trực tiếp cho Floé qua fanpage hoặc email.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <CopyButton text={ideaBriefText}>{ctaLabels.copyBrief}</CopyButton>

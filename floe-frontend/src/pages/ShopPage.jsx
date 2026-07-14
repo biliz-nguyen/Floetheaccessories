@@ -64,7 +64,7 @@ export default function ShopPage() {
             Chọn món phụ kiện nói đúng vibe của bạn.
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-inkMuted">
-            Đây là catalog để bạn xem và nhắn Floé tư vấn. Website không có giỏ hàng hoặc thanh toán giả.
+            Xem mẫu và nhắn Floé để được tư vấn theo thiết kế bạn yêu thích.
           </p>
         </div>
       </section>

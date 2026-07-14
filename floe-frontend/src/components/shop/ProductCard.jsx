@@ -14,7 +14,7 @@ export default function ProductCard({ product, onQuickView }) {
         ) : (
           <div className="flex h-full items-end p-4">
             <p className="rounded-xl bg-paper/85 px-3 py-2 text-sm font-semibold text-ink">
-              Cần ảnh sản phẩm thật
+              Ảnh sản phẩm đang được cập nhật
             </p>
           </div>
         )}

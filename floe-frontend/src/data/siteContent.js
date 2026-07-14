@@ -37,6 +37,7 @@ export const ctaLabels = {
   email: "Gửi email",
   viewSamples: "Xem các mẫu",
   startCustom: "Bắt đầu thiết kế riêng",
+  messageIdea: "Nhắn ý tưởng cho Floé",
   follow: "Theo dõi Floé",
   copyBrief: "Sao chép brief"
 }
@@ -54,12 +55,11 @@ export const homeContent = {
       "Phụ kiện thủ công dành cho những cá tính không cần giống ai. Mỗi thiết kế Floé được tạo để phản chiếu đúng vibe của bạn."
   },
   welcomeLetter: {
-    label: "A note from Floé",
-    title: "Welcome to Floé",
+    label: "A Letter from Floé",
+    title: "Welcome to Floé — Bloom In Your Own Way",
     body:
-      "Floé ra đời từ mong muốn tạo nên những món phụ kiện giúp mỗi người thể hiện bản thân theo cách riêng. Mỗi thiết kế được làm như một đóa hoa độc bản, không sao chép, không buộc bạn phải giống một khuôn mẫu nào.",
-    closing:
-      "Chào mừng bạn đến với Floé. Hãy cùng chúng mình bloom in your own way."
+      "Floé bắt đầu từ niềm tin rằng mỗi người đều có một cách riêng để nở rộ. Mỗi thiết kế được làm bằng tay như một bông hoa nhỏ, mang theo màu sắc, cá tính và câu chuyện của người sở hữu.",
+    closing: "Your vibe. Your style. Your bloom."
   },
   categoryIntro: {
     title: "Floé có gì?",
@@ -71,12 +71,20 @@ export const homeContent = {
       "Floé đang chọn lọc hình ảnh và thông tin mẫu sản phẩm đã duyệt. Bạn vẫn có thể nhắn Floé để xem các mẫu mới nhất trên fanpage."
   },
   customTeaser: {
-    eyebrow: "YOUR IDEA, OUR HANDS",
-    title: "Ý tưởng của bạn, đôi tay của Floé",
-    opening:
-      "Bạn đã bao giờ mong muốn sở hữu một món phụ kiện mang đúng dấu ấn của riêng mình?",
+    eyebrow: "Made with your idea",
+    title: "Ý tưởng của bạn — Đôi tay của Floé",
     body:
-      "Tại Floé, bạn không chỉ chọn sản phẩm có sẵn. Bạn có thể cùng chúng mình tạo nên một thiết kế dựa trên câu chuyện, màu sắc và phong cách của riêng bạn."
+      "Bạn mang đến một màu sắc, một kỷ niệm hoặc một vibe. Floé cùng bạn biến ý tưởng đó thành một món phụ kiện mang dấu ấn riêng."
+  },
+  packaging: {
+    eyebrow: "The Floé Box",
+    title: "Một món quà nhỏ, được chuẩn bị bằng nhiều dụng ý.",
+    body:
+      "Từ tem niêm phong, card lời nhắn đến từng lớp gói bên trong, Floé muốn khoảnh khắc mở hộp cũng trở thành một phần của món phụ kiện."
+  },
+  foundingTeam: {
+    title: "The Hands Behind the Bloom",
+    body: "Năm người, năm góc nhìn, cùng gieo nên Floé."
   },
   handmadeNote: {
     title: "Làm bằng tay, chọn theo câu chuyện của bạn",
@@ -91,12 +99,24 @@ export const homeContent = {
   socialShowroom: {
     title: "See Floé in motion",
     body:
-      "Theo dõi Floé để xem styling, quá trình làm, chất liệu và những thiết kế mới nhất trên fanpage."
-  },
-  atelierNote: {
-    title: "Made by real hands, shaped by real stories.",
-    body:
-      "Khi chưa có ảnh đội ngũ được duyệt, website ưu tiên kể câu chuyện qua quy trình làm và chi tiết sản phẩm."
+      "Theo dõi Floé để xem styling, quá trình làm, chất liệu và những thiết kế mới nhất trên fanpage.",
+    tiles: [
+      {
+        label: "Gift service",
+        image: "/media/brand/gift-service.webp",
+        imageAlt: "Artwork dịch vụ gói quà của Floé"
+      },
+      {
+        label: "Custom design",
+        image: "/media/brand/custom-design.webp",
+        imageAlt: "Artwork dịch vụ thiết kế riêng của Floé"
+      },
+      {
+        label: "Unboxing",
+        image: "/media/packaging/floe-unboxing-poster.webp",
+        imageAlt: "Khung hình video mở hộp Floé"
+      }
+    ]
   }
 }
 

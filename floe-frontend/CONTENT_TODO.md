@@ -10,15 +10,13 @@ Những mục dưới đây đang thiếu dữ liệu đã duyệt. Không dùng
 - Trạng thái hiển thị nếu Floé muốn công bố: có sẵn, đặt custom, sắp ra mắt.
 - URL bài đăng Facebook cụ thể cho từng mẫu nếu muốn dẫn inquiry theo mẫu.
 
-## Product And Editorial Images
+## Remaining Product And Team Content
 
-- Ảnh hero sản phẩm thật, ưu tiên crop dọc hoặc editorial composition.
-- Ảnh đại diện cho Móc khóa.
-- Ảnh đại diện cho Vòng cổ.
-- Ảnh đại diện cho Vòng eo.
+- Ảnh sản phẩm thật theo từng SKU khi Floé muốn mở catalog chi tiết.
 - Ảnh close-up chất liệu: hạt, charm, hoa, dây, chi tiết thủ công.
-- Ảnh quy trình custom design: phác thảo, chọn chất liệu, hoàn thiện, đóng gói.
-- Ảnh social showroom hoặc link bài Facebook cụ thể để dùng làm tile.
+- Tên, vai trò mô tả ngắn đã duyệt cho 4 thành viên đang có ảnh.
+- Ảnh và thông tin đã duyệt cho thành viên thứ năm.
+- URL bài đăng Facebook cụ thể cho từng tile social nếu muốn dẫn tới post riêng thay vì fanpage.
 
 ## Business Decisions
 
