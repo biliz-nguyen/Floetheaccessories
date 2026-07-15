@@ -37,6 +37,10 @@ export const ctaLabels = {
   email: "Gửi email",
   viewSamples: "Xem các mẫu",
   startCustom: "Bắt đầu thiết kế riêng",
+  designCustomShort: "Thiết kế riêng",
+  orderSample: "Đặt mẫu",
+  orderViaFacebook: "Đặt mẫu qua Facebook",
+  viewLatestSamples: "Xem mẫu mới nhất",
   messageIdea: "Nhắn ý tưởng cho Floé",
   follow: "Theo dõi Floé",
   copyBrief: "Sao chép brief"
@@ -84,7 +88,7 @@ export const homeContent = {
   },
   foundingTeam: {
     title: "The Hands Behind the Bloom",
-    body: "Năm người, năm góc nhìn, cùng gieo nên Floé."
+    body: "Năm người, năm vai trò, cùng xây nên Floé."
   },
   handmadeNote: {
     title: "Làm bằng tay, chọn theo câu chuyện của bạn",
@@ -113,8 +117,8 @@ export const homeContent = {
       },
       {
         label: "Unboxing",
-        image: "/media/packaging/floe-unboxing-poster.webp",
-        imageAlt: "Khung hình video mở hộp Floé"
+        image: "/media/video/floe-packaging-story-poster.webp",
+        imageAlt: "Khung hình phụ kiện Floé đặt cạnh hộp packaging"
       }
     ]
   }

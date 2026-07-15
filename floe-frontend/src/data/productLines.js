@@ -2,28 +2,31 @@ export const productLines = [
   {
     id: "keychain",
     label: "Móc khóa",
-    status: "Coming soon",
+    status: "Khám phá mẫu",
     description: "Một dấu ấn nhỏ đi cùng bạn mỗi ngày.",
-    image: "/media/collections/keychain-teaser.webp",
-    imageAlt: "Artwork giới thiệu dòng móc khóa Floé",
-    shopTo: "/shop?category=keychain"
+    image: "/media/products/keychain/keychain-01-cover.webp",
+    imageAlt: "Mẫu móc khóa Floé tông tím xanh",
+    shopTo: "/shop?category=keychain",
+    ctaLabel: "Khám phá mẫu"
   },
   {
     id: "necklace",
-    label: "Vòng cổ",
-    status: "Coming soon",
+    label: "Dây chuyền",
+    status: "Khám phá mẫu",
     description: "Chi tiết gần nhất với phong cách cá nhân của bạn.",
-    image: "/media/collections/necklace-teaser.webp",
-    imageAlt: "Artwork giới thiệu dòng vòng cổ Floé",
-    shopTo: "/shop?category=necklace"
+    image: "/media/products/necklace/necklace-01-cover.webp",
+    imageAlt: "Mẫu dây chuyền Floé với hoa xanh",
+    shopTo: "/shop?category=necklace",
+    ctaLabel: "Khám phá mẫu"
   },
   {
     id: "waist",
     label: "Vòng eo",
-    status: "Coming soon",
+    status: "Khám phá mẫu",
     description: "Một điểm nhấn styling có thể đổi cảm giác cả silhouette.",
-    image: "/media/collections/waist-accessory-teaser.webp",
-    imageAlt: "Artwork giới thiệu dòng vòng eo Floé",
-    shopTo: "/shop?category=waist"
+    image: "/media/products/waist/waist-01-cover.webp",
+    imageAlt: "Mẫu vòng eo Floé với hoa hồng nhạt",
+    shopTo: "/shop?category=waist",
+    ctaLabel: "Khám phá mẫu"
   }
 ]

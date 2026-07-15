@@ -1,52 +1,47 @@
 export const teamMembers = [
   {
-    id: "member-01",
-    name: "Thành viên sáng lập 01",
-    role: "Founding Team",
-    shortBio: "Thông tin cá nhân sẽ được Floé cập nhật.",
-    image: "/media/team/team-member-updated.webp",
-    imageAlt: "Chân dung thành viên sáng lập Floé",
+    id: "nguyen-le-minh",
+    name: "Nguyen Le Minh",
+    role: "CEO",
+    image: "/media/team/nguyen-le-minh.webp",
+    imageAlt: "Chân dung Nguyen Le Minh, CEO của Floé",
     order: 1,
     isPending: false
   },
   {
-    id: "member-02",
-    name: "Thành viên sáng lập 02",
-    role: "Founding Team",
-    shortBio: "Thông tin cá nhân sẽ được Floé cập nhật.",
-    image: "/media/team/member-02.webp",
-    imageAlt: "Chân dung thành viên sáng lập Floé",
+    id: "ta-thi-hong-phuc",
+    name: "Tạ Thị Hồng Phúc",
+    role: "CPO",
+    image: "/media/team/ta-thi-hong-phuc.webp",
+    imageAlt: "Chân dung Tạ Thị Hồng Phúc, CPO của Floé",
     order: 2,
     isPending: false
   },
   {
-    id: "member-03",
-    name: "Thành viên sáng lập 03",
-    role: "Founding Team",
-    shortBio: "Thông tin cá nhân sẽ được Floé cập nhật.",
-    image: "/media/team/member-03.webp",
-    imageAlt: "Chân dung thành viên sáng lập Floé",
+    id: "nguyen-huynh-thuy-vy",
+    name: "Nguyễn Huỳnh Thúy Vy",
+    role: "CMO",
+    image: "/media/team/nguyen-huynh-thuy-vy.webp",
+    imageAlt: "Chân dung Nguyễn Huỳnh Thúy Vy, CMO của Floé",
     order: 3,
     isPending: false
   },
   {
-    id: "member-04",
-    name: "Thành viên sáng lập 04",
-    role: "Founding Team",
-    shortBio: "Thông tin cá nhân sẽ được Floé cập nhật.",
-    image: "/media/team/member-04.webp",
-    imageAlt: "Chân dung thành viên sáng lập Floé",
+    id: "nguyen-minh-thu",
+    name: "Nguyễn Minh Thư",
+    role: "COO",
+    image: "/media/team/nguyen-minh-thu.webp",
+    imageAlt: "Chân dung Nguyễn Minh Thư, COO của Floé",
     order: 4,
     isPending: false
   },
   {
-    id: "member-05",
-    name: "Thành viên thứ năm",
-    role: "Founding Team",
-    shortBio: "Thông tin và hình ảnh sẽ được cập nhật.",
-    image: "/media/team/member-05-placeholder.webp",
-    imageAlt: "",
+    id: "dang-nguyen-nhat-quang",
+    name: "Đặng Nguyễn Nhật Quang",
+    role: "CCO",
+    image: "/media/team/dang-nguyen-nhat-quang.webp",
+    imageAlt: "Chân dung Đặng Nguyễn Nhật Quang, CCO của Floé",
     order: 5,
-    isPending: true
+    isPending: false
   }
 ]

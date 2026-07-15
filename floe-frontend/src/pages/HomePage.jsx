@@ -54,8 +54,8 @@ export default function HomePage() {
         <div className="relative grid grid-cols-[0.9fr_1.1fr] gap-3">
           <div className="overflow-hidden rounded-[24px] border border-ink/10 bg-paper shadow-print">
             <img
-              src="/media/brand/welcome-letter.webp"
-              alt="Artwork chào mừng của Floé với thông điệp Bloom In Your Own Way"
+              src="/media/products/waist/waist-01-detail-03.webp"
+              alt="Mẫu vòng eo Floé được phối cùng trang phục hồng"
               className="h-full min-h-[25rem] w-full object-cover"
               loading="eager"
             />
@@ -63,16 +63,16 @@ export default function HomePage() {
           <div className="grid gap-3">
             <div className="overflow-hidden rounded-[24px] border border-ink/10 bg-petal shadow-print">
               <img
-                src="/media/brand/custom-design.webp"
-                alt="Artwork dịch vụ thiết kế riêng của Floé"
+                src="/media/products/necklace/necklace-01-cover.webp"
+                alt="Mẫu dây chuyền Floé với hoa xanh"
                 className="aspect-square h-full w-full object-cover"
                 loading="eager"
               />
             </div>
             <div className="overflow-hidden rounded-[24px] border border-ink/10 bg-paperWarm shadow-print">
               <img
-                src="/media/brand/gift-service.webp"
-                alt="Artwork dịch vụ gói quà của Floé"
+                src="/media/packaging/packaging-main.webp"
+                alt="Hộp Floé mở với lớp gói và card bên trong"
                 className="aspect-square h-full w-full object-cover"
                 loading="lazy"
               />

@@ -1,47 +1,47 @@
 export const packagingMedia = {
   video: {
-    poster: "/media/packaging/floe-unboxing-poster.webp",
+    poster: "/media/video/floe-packaging-story-poster.webp",
     sources: [
       {
-        src: "/media/packaging/floe-unboxing.webm",
+        src: "/media/video/floe-packaging-story.webm",
         type: "video/webm"
       },
       {
-        src: "/media/packaging/floe-unboxing.mp4",
+        src: "/media/video/floe-packaging-story.mp4",
         type: "video/mp4"
       }
     ],
-    label: "Video mở hộp Floé"
+    label: "Video phụ kiện Floé đặt cạnh hộp packaging"
   },
-  collage: [
+  mainImage: {
+    image: "/media/packaging/packaging-main.webp",
+    imageAlt: "Hộp Floé mở với lớp gói và card bên trong"
+  },
+  supporting: [
     {
-      id: "brand-card",
-      image: "/media/packaging/brand-card.webp",
-      imageAlt: "Card thương hiệu Floé trong bộ packaging",
-      className: "left-4 top-8 w-[70%] rotate-[-3deg] md:left-8 md:w-[64%]"
+      id: "open-box",
+      image: "/media/packaging/packaging-open-box.webp",
+      imageAlt: "Hộp Floé mở với giấy gói và card hồng"
     },
     {
-      id: "message-card",
-      image: "/media/packaging/message-card.webp",
-      imageAlt: "Card lời nhắn Floé trong bộ packaging",
-      className: "right-2 top-28 w-[66%] rotate-[2deg] md:right-4 md:top-36"
+      id: "card-detail",
+      image: "/media/packaging/packaging-card-detail.webp",
+      imageAlt: "Card cảm ơn và tem tròn trong hộp Floé"
     },
     {
-      id: "round-label",
-      image: "/media/packaging/round-label.webp",
-      imageAlt: "",
-      className: "bottom-12 left-8 w-[28%] rotate-[4deg] md:left-12"
+      id: "wrapped-box",
+      image: "/media/packaging/packaging-wrapped-box.webp",
+      imageAlt: "Lớp giấy gói in họa tiết bên trong hộp Floé"
     },
     {
-      id: "long-label",
-      image: "/media/packaging/long-label.webp",
-      imageAlt: "",
-      className: "bottom-5 right-10 w-[20%] rotate-[-2deg] md:right-16"
+      id: "sealed-box",
+      image: "/media/packaging/packaging-sealed-box.webp",
+      imageAlt: "Hộp Floé đã được dán tem niêm phong"
+    },
+    {
+      id: "stacked-boxes",
+      image: "/media/packaging/packaging-stacked-boxes.webp",
+      imageAlt: "Hai hộp Floé xếp chồng cùng card hồng"
     }
-  ],
-  giftTile: {
-    image: "/media/brand/gift-service.webp",
-    imageAlt: "Artwork dịch vụ gói quà của Floé",
-    label: "Gift service"
-  }
+  ]
 }

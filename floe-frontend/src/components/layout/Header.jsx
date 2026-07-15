@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import {
   brand,
   contact,
@@ -10,6 +10,10 @@ import {
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const isShopRoute = location.pathname === "/shop"
+  const headerCtaLabel = isShopRoute ? ctaLabels.orderSample : ctaLabels.message
+  const mobileCtaLabel = isShopRoute ? ctaLabels.orderSample : ctaLabels.messageOnFacebook
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/90 backdrop-blur-md">
@@ -56,7 +60,7 @@ export default function Header() {
             className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:bg-ink/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
             {...externalLinkProps}
           >
-            {ctaLabels.message}
+            {headerCtaLabel}
           </a>
         </div>
 
@@ -96,7 +100,7 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
               {...externalLinkProps}
             >
-              {ctaLabels.messageOnFacebook}
+              {mobileCtaLabel}
             </a>
           </div>
         </nav>

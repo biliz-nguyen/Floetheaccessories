@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import ProductCard from "./ProductCard.jsx"
 import { categories } from "../../data/categories.js"
 import { productContentStatus } from "../../data/products.js"
-import { contact, externalLinkProps } from "../../data/siteContent.js"
+import { contact, ctaLabels, externalLinkProps } from "../../data/siteContent.js"
 
 export default function ProductGrid({ products, onQuickView }) {
   if (products.length === 0) {
@@ -21,7 +21,7 @@ export default function ProductGrid({ products, onQuickView }) {
               href={contact.facebookUrl}
               {...externalLinkProps}
             >
-              Nhắn Floé
+              {ctaLabels.viewLatestSamples}
             </a>
             <Link
               className="inline-flex min-h-10 items-center justify-center rounded-xl border border-ink/15 px-4 text-sm font-semibold text-ink transition hover:bg-petal"

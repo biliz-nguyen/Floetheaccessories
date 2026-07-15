@@ -13,7 +13,7 @@ export default function ProductLineTeaser() {
           Ba dòng phụ kiện đầu tiên của Floé.
         </h2>
         <p className="mt-5 text-lg leading-8 text-inkMuted">
-          Các artwork release mở ra những hướng thiết kế đầu tiên. Đây là teaser dòng sản phẩm, không phải SKU đang bán sẵn.
+          Những mẫu thật đầu tiên để bạn chọn nhanh dòng phụ kiện hợp vibe của mình.
         </p>
       </div>
 
@@ -27,7 +27,7 @@ export default function ProductLineTeaser() {
               <img
                 src={line.image}
                 alt={line.imageAlt}
-                className="h-full w-full object-contain p-2 transition duration-500 group-hover:scale-[1.03]"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
               />
             </div>
@@ -43,7 +43,7 @@ export default function ProductLineTeaser() {
                 className="mt-5 inline-flex min-h-11 items-center rounded-full border border-ink/15 px-5 text-sm font-semibold text-ink transition hover:bg-petal"
                 to={line.shopTo}
               >
-                {ctaLabels.viewSamples}
+                {line.ctaLabel || ctaLabels.viewSamples}
               </Link>
             </div>
           </article>
