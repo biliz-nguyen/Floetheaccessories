@@ -4,7 +4,7 @@ export const teamMembers = [
     name: "Thành viên sáng lập 01",
     role: "Founding Team",
     shortBio: "Thông tin cá nhân sẽ được Floé cập nhật.",
-    image: "/media/team/member-01.webp",
+    image: "/media/team/team-member-updated.webp",
     imageAlt: "Chân dung thành viên sáng lập Floé",
     order: 1,
     isPending: false
@@ -43,7 +43,7 @@ export const teamMembers = [
     id: "member-05",
     name: "Thành viên thứ năm",
     role: "Founding Team",
-    shortBio: "Hình ảnh đang được cập nhật.",
+    shortBio: "Thông tin và hình ảnh sẽ được cập nhật.",
     image: "/media/team/member-05-placeholder.webp",
     imageAlt: "",
     order: 5,

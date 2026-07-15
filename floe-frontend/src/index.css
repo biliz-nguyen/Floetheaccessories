@@ -98,6 +98,29 @@
   border: 1px dashed rgba(35, 28, 32, 0.28);
 }
 
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.text-clamp-1,
+.text-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.text-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
