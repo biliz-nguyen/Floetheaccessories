@@ -7,10 +7,10 @@ import {
 
 export default function PackagingExperience() {
   return (
-    <section className="border-y border-ink/10 bg-mint/45">
+    <section className="border-y border-line bg-paperWarm">
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-16 md:grid-cols-[0.9fr_1.1fr] md:px-8 md:py-20">
         <div className="grid gap-4">
-          <div className="overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-print">
+          <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-print">
             <ReducedMotionVideo
               className="aspect-video h-full w-full object-cover"
               poster={packagingMedia.video.poster}
@@ -19,7 +19,7 @@ export default function PackagingExperience() {
               videoLabel={packagingMedia.video.label}
             />
           </div>
-          <div className="overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-print">
+          <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-print">
             <img
               src={packagingMedia.mainImage.image}
               alt={packagingMedia.mainImage.imageAlt}
@@ -47,7 +47,7 @@ export default function PackagingExperience() {
             {packagingMedia.supporting.map((item, index) => (
               <figure
                 key={item.id}
-                className={`overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-print ${
+                className={`overflow-hidden rounded-2xl border border-line bg-white shadow-print ${
                   index === 0 ? "col-span-2 sm:col-span-1" : ""
                 }`}
               >

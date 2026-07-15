@@ -21,7 +21,7 @@ export default function ProductLineTeaser() {
         {productLines.map((line) => (
           <article
             key={line.id}
-            className="group overflow-hidden rounded-[24px] border border-ink/10 bg-paper shadow-print transition hover:-translate-y-1"
+            className="group overflow-hidden rounded-2xl border border-line bg-white shadow-print transition hover:-translate-y-1"
           >
             <div className="aspect-[4/5] overflow-hidden bg-petal">
               <img
@@ -34,13 +34,13 @@ export default function ProductLineTeaser() {
             <div className="p-5">
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-3xl font-display text-ink">{line.label}</h3>
-                <span className="rounded-full border border-ink/10 bg-petal px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-inkMuted">
+                <span className="rounded-full border border-line bg-petal px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-inkMuted">
                   {line.status}
                 </span>
               </div>
               <p className="mt-3 text-sm leading-6 text-inkMuted">{line.description}</p>
               <Link
-                className="mt-5 inline-flex min-h-11 items-center rounded-full border border-ink/15 px-5 text-sm font-semibold text-ink transition hover:bg-petal"
+                className="mt-5 inline-flex min-h-11 items-center rounded-full border border-line px-5 text-sm font-semibold text-ink transition hover:bg-petal"
                 to={line.shopTo}
               >
                 {line.ctaLabel || ctaLabels.viewSamples}

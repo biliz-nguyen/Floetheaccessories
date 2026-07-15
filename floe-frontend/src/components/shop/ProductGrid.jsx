@@ -7,7 +7,7 @@ import { contact, ctaLabels, externalLinkProps } from "../../data/siteContent.js
 export default function ProductGrid({ products, onQuickView }) {
   if (products.length === 0) {
     return (
-      <div className="rounded-2xl border border-ink/10 bg-paperWarm p-4 md:p-5">
+      <div className="rounded-2xl border border-line bg-white p-4 md:p-5">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="text-2xl font-display text-ink">{productContentStatus.emptyTitle}</h2>
@@ -27,14 +27,14 @@ export default function ProductGrid({ products, onQuickView }) {
               className="inline-flex min-h-10 items-center justify-center rounded-xl border border-ink/15 px-4 text-sm font-semibold text-ink transition hover:bg-petal"
               to="#shop-category-tabs"
             >
-              Xem các dòng sản phẩm
+              Khám phá dòng sản phẩm
             </Link>
           </div>
         </div>
 
         <div className="mt-5 grid grid-cols-3 gap-2 md:max-w-3xl md:gap-3">
           {categories.map((category) => (
-            <article key={category.id} className="overflow-hidden rounded-xl border border-ink/10 bg-paper">
+            <article key={category.id} className="overflow-hidden rounded-xl border border-line bg-white">
               <div className="aspect-[4/3] bg-petal">
                 <img
                   src={category.image}

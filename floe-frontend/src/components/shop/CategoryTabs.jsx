@@ -6,7 +6,7 @@ export default function CategoryTabs({ activeCategory, onSelectCategory }) {
   return (
     <nav
       id="shop-category-tabs"
-      className="sticky top-[73px] z-40 border-b border-ink/10 bg-paper/95 backdrop-blur-md"
+      className="sticky top-[73px] z-40 border-b border-line bg-paper/95 backdrop-blur-md md:top-[81px]"
       aria-label="Dòng sản phẩm"
     >
       <div className="scrollbar-none mx-auto flex max-w-7xl gap-2 overflow-x-auto px-5 py-2 md:px-8">
@@ -20,8 +20,8 @@ export default function CategoryTabs({ activeCategory, onSelectCategory }) {
               onClick={() => onSelectCategory(category.id)}
               className={`min-h-10 shrink-0 rounded-xl border px-4 text-sm font-semibold transition active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
                 active
-                  ? "border-ink bg-ink text-paper"
-                  : "border-ink/10 bg-paper text-ink hover:bg-petal"
+                  ? "border-pinkDeep bg-pinkDeep text-white"
+                  : "border-line bg-white text-ink hover:bg-petal"
               }`}
               aria-pressed={active}
             >

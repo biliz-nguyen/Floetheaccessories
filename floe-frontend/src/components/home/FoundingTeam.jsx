@@ -22,7 +22,7 @@ export default function FoundingTeam() {
         {orderedMembers.map((member, index) => (
           <article
             key={member.id}
-            className={`overflow-hidden rounded-2xl border border-ink/10 bg-paper shadow-print ${
+            className={`overflow-hidden rounded-2xl border border-line bg-white shadow-print ${
               index === orderedMembers.length - 1
                 ? "col-span-2 mx-auto w-full max-w-[15rem] md:col-span-1 md:max-w-none"
                 : ""

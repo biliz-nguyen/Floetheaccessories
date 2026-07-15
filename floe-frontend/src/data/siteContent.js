@@ -29,8 +29,8 @@ export const mobileDock = [
 ]
 
 export const ctaLabels = {
-  explore: "Khám phá Floé",
-  custom: "Thiết kế riêng cùng Floé",
+  explore: "Khám phá sản phẩm",
+  custom: "Thiết kế riêng",
   message: "Nhắn Floé",
   messageOnFacebook: "Nhắn Floé trên Facebook",
   call: "Gọi Floé",
@@ -54,9 +54,9 @@ export const homeContent = {
   },
   hero: {
     eyebrow: "FLOÉ • HANDMADE ACCESSORIES",
-    headline: "Bloom In Your Own Way.",
+    headline: "Bloom In Your Own Way",
     body:
-      "Phụ kiện thủ công dành cho những cá tính không cần giống ai. Mỗi thiết kế Floé được tạo để phản chiếu đúng vibe của bạn."
+      "Phụ kiện thủ công mang theo màu sắc, cá tính và câu chuyện của riêng bạn."
   },
   welcomeLetter: {
     label: "A Letter from Floé",
@@ -72,7 +72,7 @@ export const homeContent = {
   featuredShowroom: {
     title: "Chọn món phụ kiện nói đúng vibe của bạn",
     empty:
-      "Floé đang chọn lọc hình ảnh và thông tin mẫu sản phẩm đã duyệt. Bạn vẫn có thể nhắn Floé để xem các mẫu mới nhất trên fanpage."
+      "Bộ sưu tập đầu tiên đang dần hé nở. Theo dõi Floé để xem những thiết kế mới nhất."
   },
   customTeaser: {
     eyebrow: "Made with your idea",

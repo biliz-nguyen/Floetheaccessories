@@ -8,12 +8,16 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-paperWarm">
+    <footer className="border-t border-line bg-paperWarm">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.35fr_0.9fr_0.9fr] md:px-8">
         <div>
-          <div className="flex items-center gap-2">
-            <img src="/lo.png" alt="" className="h-10 w-10 rounded-xl object-cover" />
-            <p className="text-sm font-semibold text-ink">{brand.name}</p>
+          <div className="flex items-center gap-3">
+            <img
+              src="/media/brand/floe-logo.png"
+              alt="Floé"
+              className="h-12 w-12 object-contain"
+            />
+            <p className="text-sm font-semibold text-ink">{brand.descriptor}</p>
           </div>
           <h2 className="mt-5 max-w-lg text-3xl font-display text-ink">
             {footerContent.invitation}
@@ -71,7 +75,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="border-t border-ink/10">
+      <div className="border-t border-line">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-6 text-sm text-inkMuted md:flex-row md:px-8">
           <span>2026 {brand.name}</span>
           <span>{brand.descriptor}</span>

@@ -7,14 +7,14 @@ export default function MobileDock() {
   return (
     <nav
       aria-label="Điều hướng nhanh mobile"
-      className="fixed inset-x-3 bottom-3 z-50 rounded-3xl border border-ink/10 bg-paper/95 px-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2 shadow-print backdrop-blur md:hidden"
+      className="fixed inset-x-3 bottom-3 z-50 rounded-3xl border border-line bg-paper/95 px-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2 shadow-print backdrop-blur md:hidden"
     >
       <div className="grid grid-cols-4 gap-1">
         {mobileDock.map((item) => {
           const external = item.to.startsWith("http")
           const active = !external && location.pathname === item.to
           const className = `flex min-h-14 flex-col items-center justify-center gap-1 rounded-2xl text-[11px] font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
-            active ? "bg-ink text-paper" : "text-inkMuted hover:bg-petal hover:text-ink"
+            active ? "bg-pinkDeep text-white" : "text-inkMuted hover:bg-petal hover:text-ink"
           }`
           const content = (
             <>

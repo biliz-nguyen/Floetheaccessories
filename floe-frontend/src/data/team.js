@@ -5,8 +5,7 @@ export const teamMembers = [
     role: "CEO",
     image: "/media/team/nguyen-le-minh.webp",
     imageAlt: "Chân dung Nguyen Le Minh, CEO của Floé",
-    order: 1,
-    isPending: false
+    order: 1
   },
   {
     id: "ta-thi-hong-phuc",
@@ -14,8 +13,7 @@ export const teamMembers = [
     role: "CPO",
     image: "/media/team/ta-thi-hong-phuc.webp",
     imageAlt: "Chân dung Tạ Thị Hồng Phúc, CPO của Floé",
-    order: 2,
-    isPending: false
+    order: 2
   },
   {
     id: "nguyen-huynh-thuy-vy",
@@ -23,8 +21,7 @@ export const teamMembers = [
     role: "CMO",
     image: "/media/team/nguyen-huynh-thuy-vy.webp",
     imageAlt: "Chân dung Nguyễn Huỳnh Thúy Vy, CMO của Floé",
-    order: 3,
-    isPending: false
+    order: 3
   },
   {
     id: "nguyen-minh-thu",
@@ -32,8 +29,7 @@ export const teamMembers = [
     role: "COO",
     image: "/media/team/nguyen-minh-thu.webp",
     imageAlt: "Chân dung Nguyễn Minh Thư, COO của Floé",
-    order: 4,
-    isPending: false
+    order: 4
   },
   {
     id: "dang-nguyen-nhat-quang",
@@ -41,7 +37,6 @@ export const teamMembers = [
     role: "CCO",
     image: "/media/team/dang-nguyen-nhat-quang.webp",
     imageAlt: "Chân dung Đặng Nguyễn Nhật Quang, CCO của Floé",
-    order: 5,
-    isPending: false
+    order: 5
   }
 ]

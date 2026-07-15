@@ -4,6 +4,18 @@
 
 :root {
   color-scheme: light;
+  --color-background: #fffafb;
+  --color-surface: #ffffff;
+  --color-surface-soft: #fff6f8;
+  --color-surface-pink: #fff0f4;
+  --color-pink-soft: #f7d4df;
+  --color-pink-medium: #eba8bc;
+  --color-pink-strong: #d66f91;
+  --color-pink-deep: #b84f74;
+  --color-text: #34282d;
+  --color-text-muted: #76636b;
+  --color-border: rgba(184, 79, 116, 0.16);
+  --color-focus: #a63d65;
 }
 
 * {
@@ -18,11 +30,11 @@
   body {
     margin: 0;
     font-family: "Sora", sans-serif;
-    color: #231c20;
-    background-color: #fbf7f1;
+    color: var(--color-text);
+    background-color: var(--color-background);
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0)),
-      repeating-linear-gradient(90deg, rgba(35, 28, 32, 0.025) 0 1px, transparent 1px 14px);
+      linear-gradient(180deg, #fffafb 0%, #ffffff 48%, #fff1f5 100%),
+      repeating-linear-gradient(90deg, rgba(184, 79, 116, 0.018) 0 1px, transparent 1px 16px);
     min-height: 100vh;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -56,7 +68,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #231c20;
+    outline: 2px solid var(--color-focus);
     outline-offset: 3px;
   }
 
@@ -74,28 +86,28 @@
 
 .fleur-grid {
   background-image:
-    linear-gradient(90deg, rgba(35, 28, 32, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(35, 28, 32, 0.05) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(184, 79, 116, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(184, 79, 116, 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
 .glass-card {
-  background: rgba(251, 247, 241, 0.86);
-  border: 1px solid rgba(35, 28, 32, 0.12);
-  box-shadow: 0 18px 50px rgba(35, 28, 32, 0.1);
+  background: rgba(255, 250, 251, 0.9);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 18px 50px rgba(184, 79, 116, 0.1);
 }
 
 .paper-edge {
   background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0)),
-    repeating-linear-gradient(135deg, rgba(35, 28, 32, 0.035) 0 1px, transparent 1px 9px);
+    repeating-linear-gradient(135deg, rgba(184, 79, 116, 0.035) 0 1px, transparent 1px 9px);
 }
 
 .asset-placeholder {
   background:
-    linear-gradient(135deg, rgba(255, 240, 244, 0.72), rgba(205, 229, 216, 0.58)),
-    #f4ece2;
-  border: 1px dashed rgba(35, 28, 32, 0.28);
+    linear-gradient(135deg, rgba(255, 240, 244, 0.88), rgba(247, 212, 223, 0.58)),
+    #fff6f8;
+  border: 1px dashed rgba(184, 79, 116, 0.28);
 }
 
 .scrollbar-none {
