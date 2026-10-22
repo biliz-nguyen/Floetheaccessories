@@ -11,17 +11,6 @@ export const categories = [
       "linear-gradient(135deg, rgba(255, 240, 244, 0.98), rgba(247, 212, 223, 0.78))"
   },
   {
-    id: "necklace",
-    label: "Dây chuyền",
-    slug: "day-chuyen",
-    supportingIdea: "Chi tiết gần nhất với phong cách cá nhân của bạn.",
-    image: "/media/products/necklace/lunara-choker-cover.webp",
-    imageAlt: "Lunara Choker của Floé với hoa xanh",
-    accentClass: "bg-paperWarm",
-    gradient:
-      "linear-gradient(135deg, rgba(255, 250, 251, 0.98), rgba(255, 246, 248, 0.92))"
-  },
-  {
     id: "waist",
     label: "Vòng eo",
     slug: "vong-eo",

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import CustomDesignSection from "../components/home/CustomDesignSection.jsx"
 import FoundingTeam from "../components/home/FoundingTeam.jsx"
+import LatestPosts from "../components/home/LatestPosts.jsx"
 import PackagingExperience from "../components/home/PackagingExperience.jsx"
 import ProductLineTeaser from "../components/home/ProductLineTeaser.jsx"
 import WelcomeLetterSection from "../components/home/WelcomeLetterSection.jsx"
@@ -61,6 +62,7 @@ export default function HomePage() {
       <WelcomeLetterSection />
       <CustomDesignSection />
       <PackagingExperience />
+      <LatestPosts />
       <FoundingTeam />
 
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">

@@ -1,18 +1,23 @@
 import { useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import { brand } from "../../data/siteContent.js"
+import { posts } from "../../data/posts.js"
 
 const routeTitles = {
   "/": `${brand.name} - ${brand.primaryLine}`,
   "/shop": `Sản phẩm - ${brand.name}`,
-  "/custom": `Thiết kế riêng - ${brand.name}`
+  "/custom": `Thiết kế riêng - ${brand.name}`,
+  "/posts": `Bài viết - ${brand.name}`
 }
 
 export default function ScrollManager() {
   const location = useLocation()
 
   useEffect(() => {
-    document.title = routeTitles[location.pathname] || `Không tìm thấy - ${brand.name}`
+    const post = posts.find((entry) => location.pathname === `/posts/${entry.slug}`)
+    document.title = post
+      ? `${post.title} - ${brand.name}`
+      : routeTitles[location.pathname] || `Không tìm thấy - ${brand.name}`
 
     if (location.hash) {
       window.setTimeout(() => {

@@ -10,14 +10,14 @@ export default function ProductLineTeaser() {
           First collection lines
         </p>
         <h2 className="mt-4 text-5xl font-display text-ink md:text-6xl">
-          Ba dòng phụ kiện đầu tiên của Floé.
+          Móc khóa & vòng eo của Floé.
         </h2>
         <p className="mt-5 text-lg leading-8 text-inkMuted">
           Những mẫu thật đầu tiên để bạn chọn nhanh dòng phụ kiện hợp vibe của mình.
         </p>
       </div>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-2">
         {productLines.map((line) => (
           <article
             key={line.id}

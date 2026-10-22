@@ -14,7 +14,10 @@ export default function ShopPage() {
   const quickViewTriggerRef = useRef(null)
   const closeButtonRef = useRef(null)
   const dialogRef = useRef(null)
-  const activeCategory = searchParams.get("category") || "all"
+  const requestedCategory = searchParams.get("category")
+  const activeCategory = categories.some((category) => category.id === requestedCategory)
+    ? requestedCategory
+    : "all"
 
   const visibleProducts = useMemo(() => {
     if (activeCategory === "all") return products

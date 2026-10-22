@@ -10,16 +10,6 @@ export const productLines = [
     ctaLabel: "Khám phá mẫu"
   },
   {
-    id: "necklace",
-    label: "Dây chuyền",
-    status: "Khám phá mẫu",
-    description: "Chi tiết gần nhất với phong cách cá nhân của bạn.",
-    image: "/media/products/necklace/lunara-choker-cover.webp",
-    imageAlt: "Lunara Choker của Floé với hoa xanh",
-    shopTo: "/shop?category=necklace",
-    ctaLabel: "Khám phá mẫu"
-  },
-  {
     id: "waist",
     label: "Vòng eo",
     status: "Khám phá mẫu",

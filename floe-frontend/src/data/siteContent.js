@@ -18,6 +18,7 @@ export const navigation = [
   { label: "Trang chủ", to: "/" },
   { label: "Sản phẩm", to: "/shop" },
   { label: "Thiết kế riêng", to: "/custom" },
+  { label: "Bài viết", to: "/posts" },
   { label: "Về Floé", to: "/#about-floe" }
 ]
 
@@ -67,7 +68,7 @@ export const homeContent = {
   },
   categoryIntro: {
     title: "Floé có gì?",
-    body: "Ba dòng phụ kiện đầu tiên, ba cách để bạn mang đúng vibe của mình."
+    body: "Móc khóa và vòng eo, hai cách để bạn mang đúng vibe của mình."
   },
   featuredShowroom: {
     title: "Chọn món phụ kiện nói đúng vibe của bạn",

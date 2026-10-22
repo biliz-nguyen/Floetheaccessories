@@ -4,7 +4,7 @@ Những mục dưới đây đang thiếu dữ liệu đã duyệt. Không dùng
 
 ## Product Data
 
-- Tên mẫu sản phẩm đã duyệt cho từng dòng: Móc khóa, Vòng cổ, Vòng eo.
+- Tên mẫu sản phẩm đã duyệt cho từng dòng đang bán: Móc khóa, Vòng eo.
 - Mã mẫu sản phẩm theo format Floé muốn dùng.
 - Ghi chú chất liệu/màu sắc đã xác nhận cho từng mẫu.
 - Trạng thái hiển thị nếu Floé muốn công bố: có sẵn, đặt custom, sắp ra mắt.

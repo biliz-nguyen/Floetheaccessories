@@ -32,7 +32,7 @@ export default function ProductGrid({ products, onQuickView }) {
           </div>
         </div>
 
-        <div className="mt-5 grid grid-cols-3 gap-2 md:max-w-3xl md:gap-3">
+        <div className="mt-5 grid grid-cols-2 gap-2 md:max-w-3xl md:gap-3">
           {categories.map((category) => (
             <article key={category.id} className="overflow-hidden rounded-xl border border-line bg-white">
               <div className="aspect-[4/3] bg-petal">

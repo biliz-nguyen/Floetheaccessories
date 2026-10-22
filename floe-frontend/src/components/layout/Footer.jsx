@@ -68,6 +68,12 @@ export default function Footer() {
             Thiết kế riêng
           </Link>
           <Link
+            to="/posts"
+            className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+          >
+            Bài viết
+          </Link>
+          <Link
             to="/#about-floe"
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
           >

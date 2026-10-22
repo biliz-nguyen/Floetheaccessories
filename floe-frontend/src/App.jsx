@@ -7,6 +7,8 @@ import CustomPage from './pages/CustomPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import ShopPage from './pages/ShopPage.jsx'
+import PostsPage from './pages/PostsPage.jsx'
+import PostPage from './pages/PostPage.jsx'
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/custom" element={<CustomPage />} />
+          <Route path="/posts" element={<PostsPage />} />
+          <Route path="/posts/:slug" element={<PostPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

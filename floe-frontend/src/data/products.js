@@ -1,7 +1,6 @@
 export const approvedPrices = {
-  novaKeychain: 120000,
-  eluneWaistChain: 160000,
-  lunaraChoker: 130000
+  novaKeychain: 49000,
+  eluneWaistChain: 49000
 }
 
 export const packagingCopy = {
@@ -49,7 +48,7 @@ export const products = [
     socialUrl: ""
   },
   {
-    id: "nova-keychain",
+    id: "nova-keychain-brown",
     code: "MK-03",
     name: "Nova Keychain",
     category: "keychain",
@@ -66,26 +65,6 @@ export const products = [
       "Nova Keychain của Floé hình hoa tông nâu tím, điểm xuyết hạt ngọc và dây kim loại trên túi trắng",
     materialNote:
       "Thiết kế hoa thủ công mang tông nâu tím trầm, kết hợp hạt ngọc và chi tiết kim loại để tạo vẻ nổi bật, cá tính.",
-    socialUrl: ""
-  },
-  {
-    id: "lunara-choker",
-    code: "DC-01",
-    name: "Lunara Choker",
-    category: "necklace",
-    categoryLabel: "Dây chuyền",
-    price: approvedPrices.lunaraChoker,
-    packagingIncluded: "Standard",
-    coverImage: "/media/products/necklace/lunara-choker-cover.webp",
-    gallery: [
-      "/media/products/necklace/lunara-choker-cover.webp",
-      "/media/products/necklace/lunara-choker-detail-01.webp",
-      "/media/products/necklace/lunara-choker-detail-02.webp",
-      "/media/products/necklace/lunara-choker-detail-03.webp",
-      "/media/products/necklace/lunara-choker-detail-04.webp"
-    ],
-    imageAlt: "Lunara Choker của Floé với hoa xanh và dây thả hạt",
-    materialNote: "Dây chuyền/choker hoa xanh với chi tiết hạt thả nhẹ.",
     socialUrl: ""
   },
   {
@@ -112,5 +91,5 @@ export const products = [
 export const productContentStatus = {
   emptyTitle: "Bộ sưu tập đầu tiên đang dần hé nở.",
   emptyDescription:
-    "Theo dõi các mẫu mới nhất và khám phá ba dòng phụ kiện của Floé."
+    "Theo dõi các mẫu mới nhất và khám phá các dòng phụ kiện của Floé."
 }
