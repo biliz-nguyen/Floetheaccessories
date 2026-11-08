@@ -26,9 +26,12 @@ export const products = [
     coverImage: "/media/products/keychain/nova-keychain-cover.webp",
     gallery: [
       "/media/products/keychain/nova-keychain-cover.webp",
-      "/media/products/keychain/nova-keychain-detail-01.webp",
-      "/media/products/keychain/nova-keychain-detail-02.webp",
-      "/media/products/keychain/nova-keychain-detail-03.webp"
+      "/media/products/keychain/nova-keychain-blue-detail.webp",
+      "/media/products/keychain/nova-keychain-blue-bag.webp",
+      "/media/products/keychain/nova-keychain-red-studio.webp",
+      "/media/products/keychain/nova-keychain-red-bag.webp",
+      "/media/products/keychain/nova-keychain-white-bag.webp",
+      "/media/products/keychain/nova-keychain-trio-studio.webp"
     ],
     imageAlt: "Nova Keychain của Floé với hoa tím xanh và chi tiết dây trang trí",
     materials: "Hoa resin thủ công phủ bóng, hạt cườm ngọc trai nhân tạo, khoen và dây kim loại chống gỉ nhẹ.",
@@ -52,10 +55,10 @@ export const products = [
     categoryLabel: "Móc khóa",
     price: approvedPrices.novaKeychain,
     packagingIncluded: "Standard",
-    coverImage: "/media/products/keychain/pink-keychain-card.webp",
+    coverImage: "/media/products/keychain/pink-keychain-cover.webp",
     gallery: [
       "/media/products/keychain/pink-keychain-cover.webp",
-      "/media/products/keychain/pink-keychain-detail.webp"
+      "/media/products/keychain/pink-keychain-card.webp"
     ],
     imageAlt:
       "Móc khóa hoa hồng Floé màu hồng phấn, điểm xuyết ngọc trai và chi tiết dây kim loại trên túi trắng",
@@ -145,7 +148,14 @@ export const historicalTrialProducts = [
     categoryLabel: "Dây chuyền",
     status: "discontinued",
     statusLabel: "Mẫu thử nghiệm đã ngừng sản xuất",
-    reportNote: "Mẫu thử nghiệm ban đầu trong báo cáo EXE201; hiện không nằm trong catalog mở bán chính thức."
+    reportNote: "Mẫu thử nghiệm ban đầu trong báo cáo EXE201; hiện không nằm trong catalog mở bán chính thức.",
+    coverImage: "/media/products/necklace/lunara-choker-studio.webp",
+    gallery: [
+      "/media/products/necklace/lunara-choker-studio.webp",
+      "/media/products/necklace/lunara-choker-detail.webp",
+      "/media/products/necklace/lunara-choker-model.webp",
+      "/media/products/necklace/lunara-choker-lookbook.webp"
+    ]
   }
 ]
 

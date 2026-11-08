@@ -20,6 +20,15 @@ export default function ProductCard({ product, onQuickView }) {
             </span>
           )}
 
+          {product.gallery?.length > 1 && (
+            <span className="absolute right-2.5 top-2.5 z-10 flex items-center gap-1 rounded-full border border-line bg-white/90 px-2 py-0.5 text-[10px] font-medium text-ink shadow-sm backdrop-blur-xs">
+              <svg className="h-3 w-3 text-pinkDeep" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span>{product.gallery.length} ảnh</span>
+            </span>
+          )}
+
           {coverImage ? (
             <img
               src={coverImage}

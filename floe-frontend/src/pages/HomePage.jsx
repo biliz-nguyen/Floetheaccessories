@@ -7,6 +7,8 @@ import LatestPosts from "../components/home/LatestPosts.jsx"
 import OurJourneyTimeline from "../components/home/OurJourneyTimeline.jsx"
 import PackagingExperience from "../components/home/PackagingExperience.jsx"
 import ProductLineTeaser from "../components/home/ProductLineTeaser.jsx"
+import StyledWithFloe from "../components/home/StyledWithFloe.jsx"
+import TheFloeCollection from "../components/home/TheFloeCollection.jsx"
 import WelcomeLetterSection from "../components/home/WelcomeLetterSection.jsx"
 import { contact, ctaLabels, externalLinkProps, homeContent } from "../data/siteContent.js"
 
@@ -61,6 +63,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <TheFloeCollection />
+      <StyledWithFloe />
       <ProductLineTeaser />
       <WelcomeLetterSection />
       <OurJourneyTimeline />

@@ -4,27 +4,43 @@ Tài liệu ghi nhận nguồn gốc và trạng thái xác thực của toàn b
 
 ---
 
-## 1. Dữ liệu Sản phẩm (Product Catalog)
+## 1. Dữ liệu Sản phẩm & Thư viện Hình ảnh Thực tế (Real Product Photography)
+
+Toàn bộ ảnh sản phẩm được trích xuất từ thư mục ảnh gốc Google Drive của dự án (`ẢNH SẢN PHẨM` và `BOOTH/FINAL`), được tối ưu hóa chuẩn định dạng WebP hiện đại:
 
 - **Nova Keychain (MK-01):**
-  - Trạng thái: Mẫu thử nghiệm (Prototype) ghi nhận trong báo cáo EXE201.
-  - Giá duyệt: 49.000 ₫ (mức giá thử nghiệm tiếp cận thị trường).
-  - Ảnh & Thư viện: Trích xuất từ bộ ảnh sản phẩm thực tế của Floé (`/media/products/keychain/nova-keychain-*`).
+  - Trạng thái: Mẫu thử nghiệm (Prototype) ghi nhận trong báo cáo EXE201 và mở bán tại booth.
+  - Giá duyệt: 49.000 ₫.
+  - Ảnh thực tế: 7 góc chụp chân thực bao gồm:
+    - Ảnh chính: Hoa lan tím xanh ombre viền xích bạc phối trên quai túi da.
+    - Cận cảnh: Macro hoa lan xanh resin bóng, nhụy ngọc trai, vòng cườm và khuyên bấm.
+    - Phối túi xách: Phối túi kẹp nách xanh pastel kèm điện thoại dạo phố.
+    - Phiên bản Studio hoa đỏ: Đính charm "Made With Love", khoen tròn & chuỗi hạt.
+    - Phối túi da metallic: Móc hoa lan đỏ trên quai túi hobo metallic.
+    - Phiên bản hoa trắng: Cánh hoa trắng ngọc trai, đính khuyên xỏ bạc.
+    - Cặp hoa studio: Chụp cạnh nhau trên nền gạch trắng studio.
 - **Móc khóa hoa hồng (MK-02):**
   - Trạng thái: Bộ sưu tập hiện tại.
   - Giá duyệt: 49.000 ₫.
-  - Ảnh & Thư viện: Bộ ảnh chi tiết hoa hồng pastel chụp thực tế trên túi xách trắng.
+  - Ảnh thực tế: Cánh hoa hồng phấn đổ khuôn thủ công phối trên quai túi phao thắt nơ.
 - **Nova Keychain Nâu Tím (MK-03):**
   - Trạng thái: Bộ sưu tập hiện tại.
   - Giá duyệt: 49.000 ₫.
-- **Lunara Choker (DC-01):**
-  - Trạng thái: Mẫu thử nghiệm ghi nhận trong báo cáo EXE201.
-  - Giá duyệt: 130.000 ₫.
-  - Đặc điểm: Mặt hoa resin xanh pastel, dây kim loại mảnh kèm hạt pha lê giọt nước.
+  - Ảnh thực tế: Hoa resin tông nâu tím mauve trầm kết hợp hạt ngọc và xích kim loại trên túi phao trắng.
 - **Elune Waist Chain (VE-01):**
   - Trạng thái: Bộ sưu tập hiện tại.
-  - Giá duyệt: 160.000 ₫.
-  - Đặc điểm: Dây xích đa tầng ôm eo, có nấc xích nối linh hoạt.
+  - Giá duyệt: 49.000 ₫ (đồng bộ với catalog hiện tại).
+  - Ảnh thực tế: 4 ảnh chụp trên người mẫu diện đầm hồng pastel, cận cảnh hoa hồng nhạt và chuỗi hạt buông rủ.
+- **Lunara Choker (DC-01 - Lưu trữ Mẫu thử nghiệm):**
+  - Trạng thái: Mẫu thử nghiệm ban đầu trong báo cáo EXE201.
+  - Ảnh thực tế: Bộ 4 ảnh chân thực trích xuất từ Google Drive gồm ảnh studio, cận cảnh khóa xích, ảnh người mẫu chụp lookbook đầm ren và ảnh tại quán cafe.
+- **Thư viện Styled with Floé (`/media/lifestyle/`):**
+  - Trích xuất 100% từ đợt chụp lookbook và sự kiện gian hàng pop-up thực tế tại FPT University. Bao gồm các bộ ảnh:
+    - `styled-cafe-lookbook.webp`: Người mẫu diện outfit dạo phố cùng túi metallic và Nova Keychain tại cafe.
+    - `styled-handbag-blue-orchid.webp`: Phối Nova Keychain xanh trên túi kẹp nách pastel.
+    - `styled-lace-dress-orchid.webp`: Lookbook đầm ren tiểu thư kết hợp hoa lan choker.
+    - `styled-handbag-red-orchid.webp`: Cận cảnh chi tiết kim loại và hoa đỏ trên da metallic.
+    - `styled-booth-experience.webp`: Trải nghiệm khách hàng nhận sản phẩm trực tiếp tại gian hàng.
 
 ---
 
