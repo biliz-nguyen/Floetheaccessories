@@ -1,4 +1,5 @@
 import CopyButton from "../components/common/CopyButton.jsx"
+import CustomerCareFaq from "../components/common/CustomerCareFaq.jsx"
 import { customProcess, ideaBriefFields, ideaBriefText } from "../data/customProcess.js"
 import {
   contact,
@@ -24,14 +25,14 @@ export default function CustomPage() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={contact.facebookUrl}
-              className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-semibold text-paper"
+              className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-semibold text-paper transition hover:bg-pinkDeep"
               {...externalLinkProps}
             >
               {ctaLabels.startCustom}
             </a>
             <a
               href={`mailto:${contact.email}`}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/15 px-6 text-sm font-semibold text-ink"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/15 px-6 text-sm font-semibold text-ink transition hover:bg-petal"
             >
               {ctaLabels.email}
             </a>
@@ -82,7 +83,7 @@ export default function CustomPage() {
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <CopyButton text={ideaBriefText}>{ctaLabels.copyBrief}</CopyButton>
-            <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/15 px-6 text-sm font-semibold text-ink" href={contact.facebookUrl} {...externalLinkProps}>
+            <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/15 px-6 text-sm font-semibold text-ink transition hover:bg-petal" href={contact.facebookUrl} {...externalLinkProps}>
               Mở Facebook để gửi ý tưởng
             </a>
           </div>
@@ -96,14 +97,18 @@ export default function CustomPage() {
             ))}
           </ul>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <a className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-semibold text-paper" href={`mailto:${contact.email}`}>
+            <a className="inline-flex min-h-12 items-center justify-center rounded-full bg-ink px-6 text-sm font-semibold text-paper transition hover:bg-pinkDeep" href={`mailto:${contact.email}`}>
               {ctaLabels.email}
             </a>
-            <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/15 px-6 text-sm font-semibold text-ink" href={contact.phoneHref}>
+            <a className="inline-flex min-h-12 items-center justify-center rounded-full border border-ink/15 px-6 text-sm font-semibold text-ink transition hover:bg-petal" href={contact.phoneHref}>
               {ctaLabels.call}
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="border-t border-line bg-paper px-5 py-16 md:px-8 md:py-20">
+        <CustomerCareFaq />
       </section>
     </div>
   )

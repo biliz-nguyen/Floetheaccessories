@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Link, useSearchParams } from "react-router-dom"
+import CustomerCareFaq from "../components/common/CustomerCareFaq.jsx"
 import CategoryTabs from "../components/shop/CategoryTabs.jsx"
 import ProductGrid from "../components/shop/ProductGrid.jsx"
 import { categories } from "../data/categories.js"
@@ -11,18 +12,29 @@ export default function ShopPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [quickViewProduct, setQuickViewProduct] = useState(null)
   const [activeGalleryIndex, setActiveGalleryIndex] = useState(0)
+  const [quantity, setQuantity] = useState(1)
+  const [orderNote, setOrderNote] = useState("")
+  const [copiedState, setCopiedState] = useState("idle")
+  const [statusFilter, setStatusFilter] = useState("all") // "all" | "current" | "trial"
+
   const quickViewTriggerRef = useRef(null)
   const closeButtonRef = useRef(null)
   const dialogRef = useRef(null)
-  const requestedCategory = searchParams.get("category")
-  const activeCategory = categories.some((category) => category.id === requestedCategory)
-    ? requestedCategory
-    : "all"
+  const copiedTimeoutRef = useRef(null)
+
+  const activeCategory = searchParams.get("category") || "all"
 
   const visibleProducts = useMemo(() => {
-    if (activeCategory === "all") return products
-    return products.filter((product) => product.category === activeCategory)
-  }, [activeCategory])
+    let list = products
+    if (activeCategory !== "all") {
+      list = list.filter((product) => product.category === activeCategory)
+    }
+    if (statusFilter !== "all") {
+      list = list.filter((product) => product.catalogStatus === statusFilter)
+    }
+    return list
+  }, [activeCategory, statusFilter])
+
   const countLabel =
     products.length > 0 ? `${visibleProducts.length} mẫu` : `${categories.length} dòng sản phẩm`
 
@@ -37,11 +49,15 @@ export default function ShopPage() {
   const handleOpenQuickView = (product, trigger) => {
     quickViewTriggerRef.current = trigger
     setActiveGalleryIndex(0)
+    setQuantity(1)
+    setOrderNote("")
+    setCopiedState("idle")
     setQuickViewProduct(product)
   }
 
   const handleCloseQuickView = useCallback(() => {
     setQuickViewProduct(null)
+    window.clearTimeout(copiedTimeoutRef.current)
     window.setTimeout(() => quickViewTriggerRef.current?.focus(), 0)
   }, [])
 
@@ -59,7 +75,7 @@ export default function ShopPage() {
       if (event.key !== "Tab") return
 
       const focusableElements = dialogRef.current?.querySelectorAll(
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
       )
       if (!focusableElements?.length) return
 
@@ -79,6 +95,47 @@ export default function ShopPage() {
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [handleCloseQuickView, quickViewProduct])
 
+  const handleCopyOrderInfo = async () => {
+    if (!quickViewProduct) return
+    const totalPrice = (quickViewProduct.price || 0) * quantity
+    const formattedTotal = formatVnd(totalPrice)
+    const formattedPrice = formatVnd(quickViewProduct.price || 0)
+    const noteText = orderNote.trim() ? orderNote.trim() : "Không có"
+
+    const orderText = `🌸 ĐƠN ĐẶT HÀNG FLOÉ
+• Sản phẩm: ${quickViewProduct.name}
+• Mã SKU: ${quickViewProduct.code}
+• Dòng sản phẩm: ${quickViewProduct.categoryLabel}
+• Số lượng: ${quantity}
+• Đơn giá: ${formattedPrice}
+• Tạm tính: ${formattedTotal}
+• Bao bì: Standard (Kèm hộp Floé, card cảm ơn & tem niêm phong)
+• Ghi chú thêm: ${noteText}
+---
+Floé kiểm tra và hỗ trợ tư vấn giúp mình qua Messenger nhé!`
+
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(orderText)
+      } else {
+        const textarea = document.createElement("textarea")
+        textarea.value = orderText
+        textarea.style.position = "fixed"
+        textarea.style.opacity = "0"
+        document.body.appendChild(textarea)
+        textarea.select()
+        document.execCommand("copy")
+        document.body.removeChild(textarea)
+      }
+      setCopiedState("copied")
+    } catch {
+      setCopiedState("error")
+    }
+
+    window.clearTimeout(copiedTimeoutRef.current)
+    copiedTimeoutRef.current = window.setTimeout(() => setCopiedState("idle"), 2500)
+  }
+
   const quickViewGallery = quickViewProduct
     ? quickViewProduct.gallery?.length
       ? quickViewProduct.gallery
@@ -88,6 +145,7 @@ export default function ShopPage() {
 
   return (
     <div className="pb-14">
+      {/* Catalog Header */}
       <section className="border-b border-line bg-paper">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 md:flex-row md:items-end md:justify-between md:px-8 md:py-10">
           <div>
@@ -98,29 +156,80 @@ export default function ShopPage() {
               Sản phẩm
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-inkMuted md:text-base md:leading-7">
-              Khám phá các mẫu Floé và chọn thiết kế phù hợp với phong cách của bạn.
+              Khám phá các mẫu phụ kiện hoa thủ công của Floé và chọn thiết kế phù hợp với phong cách của bạn.
             </p>
           </div>
-          <p className="w-fit rounded-xl border border-line bg-white px-3 py-2 text-sm font-semibold text-ink">
-            {countLabel}
-          </p>
+          <div className="flex items-center gap-3">
+            <p className="w-fit rounded-xl border border-line bg-white px-3.5 py-2 text-sm font-semibold text-ink shadow-sm">
+              {countLabel}
+            </p>
+          </div>
         </div>
       </section>
 
+      {/* Category Tabs */}
       <CategoryTabs activeCategory={activeCategory} onSelectCategory={handleSelectCategory} />
 
-      <section className="mx-auto max-w-7xl px-5 py-5 md:px-8 md:py-6">
+      {/* Catalog Status Filter: All / Current / Trial */}
+      <section className="mx-auto max-w-7xl px-5 pt-4 md:px-8">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line/60 pb-3">
+          <div className="flex items-center gap-2 text-xs">
+            <span className="font-semibold text-inkMuted">Bộ sưu tập:</span>
+            <button
+              type="button"
+              onClick={() => setStatusFilter("all")}
+              className={`rounded-lg px-2.5 py-1 font-semibold transition ${
+                statusFilter === "all"
+                  ? "bg-ink text-paper"
+                  : "bg-paper text-inkMuted hover:bg-petal hover:text-ink"
+              }`}
+            >
+              Tất cả ({products.length})
+            </button>
+            <button
+              type="button"
+              onClick={() => setStatusFilter("current")}
+              className={`rounded-lg px-2.5 py-1 font-semibold transition ${
+                statusFilter === "current"
+                  ? "bg-ink text-paper"
+                  : "bg-paper text-inkMuted hover:bg-petal hover:text-ink"
+              }`}
+            >
+              BST Hiện tại ({products.filter((p) => p.catalogStatus === "current").length})
+            </button>
+            <button
+              type="button"
+              onClick={() => setStatusFilter("trial")}
+              className={`rounded-lg px-2.5 py-1 font-semibold transition ${
+                statusFilter === "trial"
+                  ? "bg-ink text-paper"
+                  : "bg-paper text-inkMuted hover:bg-petal hover:text-ink"
+              }`}
+            >
+              Mẫu thử nghiệm EXE201 ({products.filter((p) => p.catalogStatus === "trial").length})
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Grid */}
+      <section className="mx-auto max-w-7xl px-5 py-6 md:px-8">
         <ProductGrid products={visibleProducts} onQuickView={handleOpenQuickView} />
       </section>
 
+      {/* Custom Design Callout */}
       <section className="mx-auto max-w-7xl px-5 pb-12 md:px-8 md:pb-16">
-        <div className="flex flex-col gap-3 border-t border-ink/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm leading-6 text-inkMuted">
-            <span className="font-semibold text-ink">Không thấy mẫu đúng vibe?</span>{" "}
-            Thiết kế riêng cùng Floé.
-          </p>
+        <div className="flex flex-col gap-3 rounded-2xl border border-line bg-paperWarm p-6 sm:flex-row sm:items-center sm:justify-between shadow-print">
+          <div>
+            <p className="text-base font-semibold text-ink">
+              Chưa tìm thấy mẫu phụ kiện đúng vibe của bạn?
+            </p>
+            <p className="mt-1 text-sm text-inkMuted">
+              Floé nhận thiết kế riêng (Custom Design) theo ý tưởng, màu sắc và số đo mong muốn.
+            </p>
+          </div>
           <Link
-            className="inline-flex min-h-11 items-center justify-center rounded-xl bg-ink px-5 text-sm font-semibold text-paper transition hover:bg-pinkDeep"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl bg-ink px-6 text-sm font-semibold text-paper transition hover:bg-pinkDeep"
             to="/custom"
           >
             {ctaLabels.designCustomShort} →
@@ -128,9 +237,15 @@ export default function ShopPage() {
         </div>
       </section>
 
+      {/* Customer Care & FAQ */}
+      <section className="border-t border-line bg-paper px-5 py-16 md:px-8 md:py-20">
+        <CustomerCareFaq />
+      </section>
+
+      {/* Quick View Modal */}
       {quickViewProduct && (
         <div
-          className="fixed inset-0 z-[70] flex items-end bg-ink/40 p-0 md:items-center md:justify-center md:p-6"
+          className="fixed inset-0 z-[70] flex items-end bg-ink/40 p-0 md:items-center md:justify-center md:p-6 backdrop-blur-xs"
           role="presentation"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) handleCloseQuickView()
@@ -138,21 +253,27 @@ export default function ShopPage() {
         >
           <div
             ref={dialogRef}
-            className="grid max-h-[90vh] w-full gap-4 overflow-y-auto rounded-t-2xl bg-white p-4 shadow-print md:max-w-4xl md:grid-cols-[minmax(0,1.05fr)_minmax(18rem,0.95fr)] md:rounded-2xl md:p-5"
+            className="grid max-h-[92vh] w-full gap-6 overflow-y-auto rounded-t-3xl bg-white p-5 shadow-2xl md:max-w-4xl md:grid-cols-[minmax(0,1fr)_minmax(20rem,1.15fr)] md:rounded-3xl md:p-7"
             role="dialog"
             aria-modal="true"
             aria-labelledby="product-quick-view-title"
           >
+            {/* Gallery Column */}
             <div>
-              <div className="overflow-hidden rounded-2xl border border-line bg-petal">
+              <div className="relative overflow-hidden rounded-2xl border border-line bg-petal">
+                {quickViewProduct.badgeLabel && (
+                  <span className="absolute left-3 top-3 z-10 rounded-full border border-pinkDeep/15 bg-white/95 px-3 py-1 text-xs font-semibold text-pinkDeep shadow-sm">
+                    {quickViewProduct.badgeLabel}
+                  </span>
+                )}
                 {activeImage ? (
                   <img
                     src={activeImage}
                     alt={quickViewProduct.imageAlt || quickViewProduct.name}
-                    className="max-h-[48vh] w-full object-contain md:max-h-[62vh]"
+                    className="max-h-[46vh] w-full object-contain md:max-h-[58vh]"
                   />
                 ) : (
-                  <div className="flex aspect-square max-h-[48vh] items-end p-4 md:max-h-[62vh]">
+                  <div className="flex aspect-square max-h-[46vh] items-end p-4 md:max-h-[58vh]">
                     <p className="rounded-xl bg-white/90 px-3 py-2 text-sm font-semibold text-ink">
                       Ảnh sản phẩm đang được cập nhật
                     </p>
@@ -163,16 +284,16 @@ export default function ShopPage() {
               {quickViewGallery.length > 1 && (
                 <div
                   className="scrollbar-none mt-3 flex gap-2 overflow-x-auto pb-1"
-                  aria-label="Gallery sản phẩm"
+                  aria-label="Gallery ảnh sản phẩm"
                 >
                   {quickViewGallery.map((image, index) => (
                     <button
                       key={image}
                       type="button"
-                      className={`h-16 w-16 shrink-0 overflow-hidden rounded-lg border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
+                      className={`h-16 w-16 shrink-0 overflow-hidden rounded-xl border transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
                         index === activeGalleryIndex
-                          ? "border-pinkDeep"
-                          : "border-line hover:border-pinkDeep/40"
+                          ? "border-pinkDeep ring-2 ring-pinkDeep/30"
+                          : "border-line hover:border-pinkDeep/50"
                       }`}
                       onClick={() => setActiveGalleryIndex(index)}
                       aria-label={`Xem ảnh ${index + 1} của ${quickViewProduct.name}`}
@@ -188,65 +309,185 @@ export default function ShopPage() {
                   ))}
                 </div>
               )}
+
+              {/* Verified Product Info Accordion / Specs */}
+              <div className="mt-5 space-y-3 rounded-2xl border border-line bg-paperWarm p-4 text-xs">
+                <div>
+                  <p className="font-semibold text-ink">🌸 Chất liệu & Màu sắc:</p>
+                  <p className="mt-0.5 text-inkMuted">
+                    {quickViewProduct.materials || quickViewProduct.materialNote}
+                  </p>
+                  {quickViewProduct.colors && (
+                    <p className="mt-0.5 text-inkMuted">
+                      Tone màu: <span className="font-medium text-ink">{quickViewProduct.colors}</span>
+                    </p>
+                  )}
+                </div>
+
+                {quickViewProduct.dimensions && (
+                  <div>
+                    <p className="font-semibold text-ink">📏 Kích thước:</p>
+                    <p className="mt-0.5 text-inkMuted">{quickViewProduct.dimensions}</p>
+                  </div>
+                )}
+
+                {quickViewProduct.styleOptions && (
+                  <div>
+                    <p className="font-semibold text-ink">✨ Tùy chọn kiểu dáng:</p>
+                    <p className="mt-0.5 text-inkMuted">{quickViewProduct.styleOptions}</p>
+                  </div>
+                )}
+
+                <div>
+                  <p className="font-semibold text-ink">📦 Bao bì đóng gói:</p>
+                  <p className="mt-0.5 text-inkMuted">
+                    {packagingCopy.included} {packagingCopy.premiumNote}
+                  </p>
+                </div>
+
+                {quickViewProduct.careInstructions && (
+                  <div>
+                    <p className="font-semibold text-ink">🧼 Hướng dẫn bảo quản:</p>
+                    <p className="mt-0.5 text-inkMuted">{quickViewProduct.careInstructions}</p>
+                  </div>
+                )}
+              </div>
             </div>
 
-            <div className="flex min-h-0 flex-col">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-inkMuted">
-                    {quickViewProduct.categoryLabel}
-                  </p>
-                  <h2 id="product-quick-view-title" className="mt-2 text-3xl font-display text-ink">
-                    {quickViewProduct.name}
-                  </h2>
-                  <p className="mt-2 text-lg font-semibold text-pinkDeep">
-                    {typeof quickViewProduct.price === "number"
-                      ? formatVnd(quickViewProduct.price)
-                      : "Liên hệ để xác nhận giá"}
-                  </p>
+            {/* Details & Ordering Experience Column */}
+            <div className="flex min-h-0 flex-col justify-between">
+              <div>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold uppercase tracking-[0.18em] text-pinkDeep">
+                        {quickViewProduct.categoryLabel}
+                      </span>
+                      <span className="rounded-md border border-line bg-paper px-2 py-0.5 text-[11px] font-medium text-inkMuted">
+                        Mã: {quickViewProduct.code}
+                      </span>
+                    </div>
+                    <h2 id="product-quick-view-title" className="mt-2 text-3xl font-display text-ink md:text-4xl">
+                      {quickViewProduct.name}
+                    </h2>
+                    <p className="mt-2 text-2xl font-semibold text-pinkDeep">
+                      {typeof quickViewProduct.price === "number"
+                        ? formatVnd(quickViewProduct.price)
+                        : "Liên hệ để xác nhận giá"}
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    ref={closeButtonRef}
+                    className="min-h-10 shrink-0 rounded-xl border border-line px-3 text-sm font-semibold text-ink transition hover:bg-petal"
+                    onClick={handleCloseQuickView}
+                    aria-label="Đóng cửa sổ chi tiết"
+                  >
+                    ✕ Đóng
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  ref={closeButtonRef}
-                  className="min-h-10 shrink-0 rounded-xl border border-line px-3 text-sm font-semibold text-ink transition hover:bg-petal"
-                  onClick={handleCloseQuickView}
-                >
-                  Đóng
-                </button>
+
+                {quickViewProduct.materialNote && (
+                  <p className="mt-4 text-sm leading-6 text-inkMuted">
+                    {quickViewProduct.materialNote}
+                  </p>
+                )}
+
+                {/* Priority 0.B - Improved Ordering Experience Section */}
+                <div className="mt-6 rounded-2xl border border-line bg-paper p-4">
+                  <h3 className="text-sm font-semibold text-ink">
+                    Đặt hàng qua Facebook Messenger
+                  </h3>
+
+                  {/* Quantity selector */}
+                  <div className="mt-4 flex items-center justify-between border-b border-line pb-4">
+                    <span className="text-xs font-semibold text-ink">Số lượng:</span>
+                    <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                        disabled={quantity <= 1}
+                        className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white text-base font-semibold text-ink transition hover:bg-petal disabled:opacity-40"
+                        aria-label="Giảm số lượng"
+                      >
+                        -
+                      </button>
+                      <span className="w-8 text-center text-sm font-semibold text-ink">
+                        {quantity}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setQuantity((q) => Math.min(20, q + 1))}
+                        className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white text-base font-semibold text-ink transition hover:bg-petal"
+                        aria-label="Tăng số lượng"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Subtotal */}
+                  <div className="mt-3 flex items-center justify-between text-sm">
+                    <span className="text-inkMuted">Tạm tính:</span>
+                    <span className="text-base font-semibold text-ink">
+                      {typeof quickViewProduct.price === "number"
+                        ? formatVnd(quickViewProduct.price * quantity)
+                        : "Liên hệ"}
+                    </span>
+                  </div>
+
+                  {/* Customization notes */}
+                  <div className="mt-4">
+                    <label
+                      htmlFor="quickview-order-note"
+                      className="block text-xs font-semibold text-ink"
+                    >
+                      Ghi chú yêu cầu riêng (tùy chọn):
+                    </label>
+                    <textarea
+                      id="quickview-order-note"
+                      rows="2"
+                      value={orderNote}
+                      onChange={(e) => setOrderNote(e.target.value)}
+                      placeholder="Ví dụ: nới thêm xích nối, màu charm mong muốn, thiệp viết tay..."
+                      className="mt-1.5 w-full rounded-xl border border-line bg-white p-2.5 text-xs text-ink placeholder:text-inkMuted/60 focus:border-pinkDeep focus:outline-none"
+                    />
+                  </div>
+                </div>
               </div>
 
-              <dl className="mt-5 grid gap-3 rounded-2xl border border-line bg-paperWarm p-4 text-sm">
-                <div>
-                  <dt className="font-semibold text-ink">Mã mẫu</dt>
-                  <dd className="mt-1 text-inkMuted">{quickViewProduct.code}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-ink">Dòng sản phẩm</dt>
-                  <dd className="mt-1 text-inkMuted">{quickViewProduct.categoryLabel}</dd>
-                </div>
-                <div>
-                  <dt className="font-semibold text-ink">Bao bì</dt>
-                  <dd className="mt-1 text-inkMuted">
-                    {packagingCopy.included} {packagingCopy.premiumNote}
-                  </dd>
-                </div>
-              </dl>
+              {/* Action Buttons */}
+              <div className="mt-6 space-y-2.5 border-t border-line pt-4">
+                {/* 1. Copy Order Information */}
+                <button
+                  type="button"
+                  onClick={handleCopyOrderInfo}
+                  className={`inline-flex min-h-11 w-full items-center justify-center rounded-xl border px-5 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink ${
+                    copiedState === "copied"
+                      ? "border-pinkDeep bg-petal text-pinkDeep"
+                      : "border-line bg-paperWarm text-ink hover:bg-petal"
+                  }`}
+                  aria-live="polite"
+                >
+                  {copiedState === "copied"
+                    ? "✓ Đã sao chép! Dán trực tiếp vào Messenger"
+                    : copiedState === "error"
+                    ? "Không sao chép được"
+                    : ctaLabels.copyOrderInfo}
+                </button>
 
-              {quickViewProduct.materialNote && (
-                <p className="mt-4 text-sm leading-6 text-inkMuted">
-                  {quickViewProduct.materialNote}
-                </p>
-              )}
-
-              <div className="mt-5 border-t border-line pt-4 md:mt-auto">
-                <p className="text-sm font-semibold text-ink">{ctaLabels.orderSample}</p>
+                {/* 2. Message Floé on Facebook */}
                 <a
-                  className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-ink px-5 text-sm font-semibold text-paper transition hover:bg-pinkDeep"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-ink px-5 text-sm font-semibold text-paper transition hover:bg-pinkDeep shadow-sm"
                   href={quickViewProduct.socialUrl || contact.facebookUrl}
                   {...externalLinkProps}
                 >
-                  {ctaLabels.orderViaFacebook}
+                  {ctaLabels.messageOnFacebook}
                 </a>
+
+                <p className="text-center text-[11px] leading-relaxed text-inkMuted">
+                  💡 Nhấn <strong>Sao chép thông tin đặt hàng</strong> rồi dán vào Messenger để Floé tư vấn và chốt đơn ngay nhé!
+                </p>
               </div>
             </div>
           </div>

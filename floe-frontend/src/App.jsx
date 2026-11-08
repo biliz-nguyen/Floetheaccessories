@@ -6,9 +6,9 @@ import ScrollManager from './components/layout/ScrollManager.jsx'
 import CustomPage from './pages/CustomPage.jsx'
 import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
-import ShopPage from './pages/ShopPage.jsx'
-import PostsPage from './pages/PostsPage.jsx'
 import PostPage from './pages/PostPage.jsx'
+import PostsPage from './pages/PostsPage.jsx'
+import ShopPage from './pages/ShopPage.jsx'
 
 function App() {
   return (

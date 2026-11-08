@@ -18,14 +18,16 @@ export const navigation = [
   { label: "Trang chủ", to: "/" },
   { label: "Sản phẩm", to: "/shop" },
   { label: "Thiết kế riêng", to: "/custom" },
-  { label: "Bài viết", to: "/posts" },
-  { label: "Về Floé", to: "/#about-floe" }
+  { label: "Nhật ký", to: "/posts" },
+  { label: "Về Floé", to: "/#about-floe" },
+  { label: "Hỏi đáp & FAQ", to: "/#faq" }
 ]
 
 export const mobileDock = [
   { label: "Home", to: "/", mark: "F" },
   { label: "Shop", to: "/shop", mark: "S" },
   { label: "Custom", to: "/custom", mark: "C" },
+  { label: "Posts", to: "/posts", mark: "P" },
   { label: "Liên hệ", to: contact.facebookUrl, mark: "@" }
 ]
 
@@ -41,6 +43,7 @@ export const ctaLabels = {
   designCustomShort: "Thiết kế riêng",
   orderSample: "Đặt mẫu",
   orderViaFacebook: "Đặt mẫu qua Facebook",
+  copyOrderInfo: "Sao chép thông tin đặt hàng",
   viewLatestSamples: "Xem mẫu mới nhất",
   messageIdea: "Nhắn ý tưởng cho Floé",
   follow: "Theo dõi Floé",
@@ -68,7 +71,7 @@ export const homeContent = {
   },
   categoryIntro: {
     title: "Floé có gì?",
-    body: "Móc khóa và vòng eo, hai cách để bạn mang đúng vibe của mình."
+    body: "Ba dòng phụ kiện đầu tiên, ba cách để bạn mang đúng vibe của mình."
   },
   featuredShowroom: {
     title: "Chọn món phụ kiện nói đúng vibe của bạn",

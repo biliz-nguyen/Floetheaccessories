@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom"
+import CustomerCareFaq from "../components/common/CustomerCareFaq.jsx"
 import CustomDesignSection from "../components/home/CustomDesignSection.jsx"
+import CustomerFeedbackInvitation from "../components/home/CustomerFeedbackInvitation.jsx"
 import FoundingTeam from "../components/home/FoundingTeam.jsx"
 import LatestPosts from "../components/home/LatestPosts.jsx"
+import OurJourneyTimeline from "../components/home/OurJourneyTimeline.jsx"
 import PackagingExperience from "../components/home/PackagingExperience.jsx"
 import ProductLineTeaser from "../components/home/ProductLineTeaser.jsx"
 import WelcomeLetterSection from "../components/home/WelcomeLetterSection.jsx"
@@ -60,10 +63,16 @@ export default function HomePage() {
 
       <ProductLineTeaser />
       <WelcomeLetterSection />
+      <OurJourneyTimeline />
       <CustomDesignSection />
       <PackagingExperience />
-      <LatestPosts />
       <FoundingTeam />
+      <LatestPosts />
+      <CustomerFeedbackInvitation />
+
+      <section className="border-t border-line bg-paper px-5 py-20 md:px-8 md:py-24">
+        <CustomerCareFaq />
+      </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8">
         <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr]">

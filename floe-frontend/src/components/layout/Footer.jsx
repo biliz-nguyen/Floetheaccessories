@@ -28,63 +28,69 @@ export default function Footer() {
 
         <div className="space-y-3 text-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-inkMuted">
-            Liên hệ
+            Liên hệ & Đặt hàng
           </p>
           <a
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
             href={`mailto:${contact.email}`}
           >
-            {contact.email}
+            Email: {contact.email}
           </a>
           <a
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
             href={contact.phoneHref}
           >
-            {contact.phoneDisplay}
+            Hotline: {contact.phoneDisplay}
           </a>
           <a
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
             href={contact.facebookUrl}
             {...externalLinkProps}
           >
-            Facebook/Fanpage
+            Facebook Fanpage / Messenger
           </a>
         </div>
 
         <div className="space-y-3 text-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-inkMuted">
-            Lối đi nhanh
+            Khám phá Floé
           </p>
           <Link
             to="/shop"
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
           >
-            Sản phẩm
+            Sản phẩm & Catalog
           </Link>
           <Link
             to="/custom"
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
           >
-            Thiết kế riêng
+            Thiết kế riêng (Custom)
           </Link>
           <Link
             to="/posts"
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
           >
-            Bài viết
+            Nhật ký & Bài viết
           </Link>
           <Link
-            to="/#about-floe"
+            to="/#our-journey"
             className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
           >
-            Về Floé
+            Hành trình sáng tạo
+          </Link>
+          <Link
+            to="/#faq"
+            className="block min-h-9 text-ink transition hover:text-inkMuted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+          >
+            Chăm sóc khách hàng & FAQ
           </Link>
         </div>
       </div>
       <div className="border-t border-line">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 px-5 py-6 text-sm text-inkMuted md:flex-row md:px-8">
-          <span>2026 {brand.name}</span>
-          <span>{brand.descriptor}</span>
+          <span>2026 {brand.name} • Handmade Floral Accessories</span>
+          <span>{brand.primaryLine} • {brand.supportingLine}</span>
         </div>
       </div>
     </footer>

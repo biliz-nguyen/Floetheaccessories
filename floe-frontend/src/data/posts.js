@@ -1,5 +1,5 @@
 // Content adapted from Media checklist, tab KẾ HOẠCH XÚC TIẾN.
-// Source ranges and editorial decisions are recorded in CONTENT_SOURCES.md.
+// Reviewed and updated to maintain accurate historical dates and retrospective framing.
 export const posts = [
   {
     slug: "check-in-booth-floe",
@@ -8,32 +8,32 @@ export const posts = [
     startsOn: "2026-10-28",
     endsOn: "2026-10-28",
     dateLabel: "28/10/2026",
-    planned: true,
+    planned: false,
     image: "/media/products/keychain/pink-keychain-detail.webp",
     imageAlt: "Móc khóa hoa hồng Floé gắn trên túi trắng",
     excerpt:
-      "Mang theo chiếc túi xinh, ghé booth Floé tại Đại học FPT Cần Thơ để ngắm những đóa hoa handmade và khám phá hoạt động nhận quà.",
+      "Gặp gỡ Floé tại booth Đại học FPT Cần Thơ, trực tiếp chiêm ngưỡng các mẫu phụ kiện hoa handmade và tham gia minigame nhận quà.",
     intro:
-      "Một buổi hẹn nhỏ cùng những món phụ kiện xinh! Floé dự kiến tổ chức buổi bán hàng thử nghiệm đầu tiên vào ngày 28/10. Nhớ mang theo chiếc túi yêu thích để chọn một đóa hoa mang dấu ấn của riêng mình nhé.",
+      "Một buổi hẹn nhỏ cùng những đóa hoa thủ công xinh xắn! Floé đã tổ chức hoạt động bán hàng thử nghiệm và mở booth giới thiệu sản phẩm vào ngày 28/10/2026 tại Sảnh Alpha, Đại học FPT Cần Thơ trong khuôn khổ dự án EXE201. Cùng nhìn lại các hoạt động và ưu đãi đã diễn ra.",
     sections: [
       {
-        title: "Hẹn gặp bạn ở booth Floé",
+        title: "Hoạt động tại booth Floé",
         paragraphs: [
-          "Ngày dự kiến: 28/10/2026. Địa điểm: Sảnh Alpha, Đại học FPT Cần Thơ.",
-          "Theo dõi Fanpage hoặc nhắn Floé để xác nhận giờ mở booth và thông tin mới nhất trước khi ghé."
+          "Thời gian diễn ra: Ngày 28/10/2026 tại Sảnh Alpha, Đại học FPT Cần Thơ.",
+          "Đây là cơ hội để khách hàng trực tiếp cảm nhận độ hoàn thiện của từng cánh hoa resin, độ sáng của kim loại và trải nghiệm bao bì Floé Box nguyên bản."
         ]
       },
       {
-        title: "Ưu đãi dự kiến tại booth",
-        paragraphs: ["Giảm 10% khi mua hàng trực tiếp tại booth trong ngày diễn ra hoạt động."]
+        title: "Ưu đãi trực tiếp trong ngày mở booth",
+        paragraphs: ["Áp dụng ưu đãi giảm 10% cho khách hàng mua sản phẩm trực tiếp tại booth trong ngày 28/10."]
       },
       {
         title: "Minigame tìm quà cùng Floé",
         items: [
           "Follow Fanpage Floé và chia sẻ bài đăng minigame trên Facebook ở chế độ công khai để tham gia.",
-          "Mỗi bạn có 01 lượt chơi; mua hàng tại booth để nhận thêm 01 lượt.",
-          "Phần thưởng: 01 móc khóa quote may mắn hoặc 01 voucher giảm 5% khi mua sản phẩm Floé.",
-          "Số lượng quà có hạn, bạn nhớ ghé booth sớm nhé!"
+          "Mỗi bạn có 01 lượt chơi; mua hàng tại booth để nhận thêm 01 lượt quay may mắn.",
+          "Phần thưởng gồm: Móc khóa quote may mắn hoặc voucher giảm 5% cho đơn hàng tiếp theo.",
+          "Hoạt động đã kết thúc và nhận được sự hưởng ứng nhiệt tình từ các bạn sinh viên và thầy cô."
         ]
       }
     ]
@@ -44,28 +44,28 @@ export const posts = [
     category: "Cùng Floé",
     startsOn: "2026-10-29",
     endsOn: "2026-10-31",
-    dateLabel: "Nhận ảnh 29–31/10/2026 • Tổng kết 01/11",
-    planned: true,
+    dateLabel: "29–31/10/2026 • Tổng kết 01/11",
+    planned: false,
     image: "/media/products/keychain/pink-keychain-card.webp",
     imageAlt: "Móc khóa hoa Floé màu hồng phấn với chi tiết ngọc trai",
     excerpt:
       "Một chiếc móc khóa trên túi, một góc ảnh check-in, một kỷ niệm nhỏ. Cùng Floé lưu giữ những khoảnh khắc mang màu sắc của riêng bạn.",
     intro:
-      "Every little moment matters. Floé Moments là lời mời bạn chia sẻ ảnh món phụ kiện yêu thích hoặc khoảnh khắc check-in tại booth dự kiến ngày 28/10. Không cần một bức ảnh cầu kỳ, chỉ cần một khoảnh khắc mang dấu ấn của riêng bạn.",
+      "Every little moment matters. Hoạt động Floé Moments là lời mời các bạn yêu mến thương hiệu chia sẻ hình ảnh món phụ kiện yêu thích hoặc khoảnh khắc check-in cùng Floé trong đợt thử nghiệm cuối tháng 10/2026. Từng bức ảnh đều là một cách bạn kể câu chuyện của riêng mình.",
     sections: [
       {
-        title: "Cách thức tham gia dự kiến",
+        title: "Nội dung hoạt động tiếp nhận ảnh",
         items: [
-          "Chọn ảnh sản phẩm Floé bạn yêu thích hoặc ảnh check-in tại booth ngày 28/10.",
+          "Các bạn chọn ảnh sản phẩm Floé yêu thích hoặc ảnh check-in tại booth ngày 28/10.",
           "Gửi ảnh qua Inbox Fanpage Floé hoặc bình luận dưới bài đăng chương trình trên Facebook.",
-          "Cho Floé biết bạn có đồng ý để chúng mình chia sẻ lại hình ảnh trên Fanpage hay không."
+          "Xác nhận đồng ý để Floé chia sẻ lại hình ảnh styling trên Fanpage chính thức."
         ]
       },
       {
-        title: "Lưu lại lịch hẹn",
+        title: "Ghi nhận thời gian chương trình",
         paragraphs: [
-          "Dự kiến nhận ảnh từ 29/10 đến hết 31/10/2026. Bài tổng kết dự kiến xuất hiện trên Fanpage ngày 01/11/2026.",
-          "Floé chỉ lựa chọn và chia sẻ lại hình ảnh khi đã được chủ nhân đồng ý. Chương trình không yêu cầu mua hàng, không có giảm giá và không phải minigame."
+          "Đợt tiếp nhận ảnh diễn ra từ ngày 29/10 đến hết ngày 31/10/2026. Floé tiến hành tổng kết và gửi lời cảm ơn trên Fanpage vào ngày 01/11/2026.",
+          "Floé chỉ lựa chọn và chia sẻ lại hình ảnh khi đã được chủ nhân bức ảnh đồng ý. Hoạt động mang tính chất kết nối cộng đồng, không yêu cầu mua hàng và không phải minigame thương mại."
         ]
       }
     ]
@@ -83,20 +83,20 @@ export const posts = [
     excerpt:
       "Một chút ngọt ngào để tự thưởng hoặc gửi tặng người thương. Xem lại chương trình quà tặng và ưu đãi dành cho dịp 20/10.",
     intro:
-      "Dù chọn tự thưởng cho bản thân hay gửi gắm yêu thương đến người bạn thân thiết, Floé muốn góp một chút ngọt ngào qua những món phụ kiện handmade. Đây là nội dung chương trình Special Gift dành cho dịp 20/10/2026.",
+      "Dù chọn tự thưởng cho bản thân hay gửi gắm yêu thương đến người bạn thân thiết, Floé muốn góp một chút ngọt ngào qua những món phụ kiện handmade. Đây là nội dung chương trình Special Gift đã diễn ra trong dịp 20/10/2026.",
     sections: [
       {
         title: "Quà tặng trong thời gian chương trình",
         items: [
           "Mọi đơn hàng: tặng kèm 01 móc khóa quote may mắn.",
-          "Đơn hàng từ 150.000 ₫: tặng thêm 01 charm tự chọn."
+          "Đơn hàng từ 150.000 ₫: tặng thêm 01 charm hoa tự chọn."
         ]
       },
       {
-        title: "Buy 2 Together",
+        title: "Chính sách ưu đãi Buy 2 Together",
         paragraphs: [
           "Mua 02 sản phẩm bất kỳ: giảm 10% cho sản phẩm thứ hai có giá trị bằng hoặc thấp hơn.",
-          "Ưu đãi chỉ áp dụng cho đơn hàng đặt từ 18/10 đến hết ngày 20/10/2026."
+          "Chương trình đã áp dụng thành công cho các đơn hàng đặt từ 18/10 đến hết ngày 20/10/2026."
         ]
       }
     ]
@@ -110,25 +110,57 @@ export const posts = [
     dateLabel: "16–20/10/2026",
     planned: false,
     image: "/media/posts/giai-ma-thong-diep.webp",
-    imageAlt: "Artwork nhá hàng minigame Giải mã thông điệp của Floé, hẹn ngày 17/10",
+    imageAlt: "Artwork nhá hàng minigame Giải mã thông điệp của Floé",
     excerpt:
       "Một thử thách nhỏ dành cho những người bạn đồng hành cùng Floé. Xem lại cách giải mã thông điệp để mở khóa ưu đãi trong đợt ra mắt.",
     intro:
-      "Một chút bất ngờ, một chút ưu đãi và những món phụ kiện xinh xắn. Minigame “Giải mã thông điệp – Rinh thêm ưu đãi” là hoạt động Floé dành cho những người bạn đồng hành trong giai đoạn mở bán.",
+      "Một chút bất ngờ, một chút thử thách và những món quà handmade xinh xắn. Minigame “Giải mã thông điệp – Rinh thêm ưu đãi” là hoạt động Floé dành tặng cho những người bạn đồng hành trong giai đoạn khởi động mở bán.",
     sections: [
       {
         title: "Cơ chế ưu đãi của minigame",
         items: [
           "Mỗi câu trả lời đúng mở khóa thêm 1% ưu đãi, tối đa 10 câu tương ứng 10%.",
-          "05 người có câu trả lời hợp lệ và sớm nhất được nhận ưu đãi từ Floé.",
-          "Thể lệ chi tiết và hướng dẫn nhận mã cá nhân được trao đổi qua Fanpage Floé."
+          "Dành cho những bạn có câu trả lời hợp lệ và sớm nhất theo thể lệ trên Fanpage.",
+          "Mã ưu đãi được gửi và đối soát trực tiếp qua tin nhắn Fanpage Floé."
         ]
       },
       {
-        title: "Lịch chương trình",
+        title: "Lịch trình chương trình đã diễn ra",
         paragraphs: [
-          "Theo kế hoạch: hé lộ ngày 16/10, công bố thể lệ ngày 17/10 và công bố kết quả ngày 20/10/2026.",
-          "Cảm ơn bạn đã dành thời gian tìm hiểu và đồng hành cùng Floé trong những ngày đầu tiên."
+          "Chương trình diễn ra từ ngày 16/10 và kết thúc vào ngày 20/10/2026.",
+          "Floé trân trọng cảm ơn các bạn đã nhiệt tình tham gia và tương tác cùng thương hiệu trong những ngày đầu ra mắt."
+        ]
+      }
+    ]
+  },
+  {
+    slug: "bloom-in-your-own-way",
+    title: "Floé — Bloom In Your Own Way",
+    category: "Khởi nguồn",
+    startsOn: "2026-07-01",
+    endsOn: "2026-07-01",
+    dateLabel: "01/07/2026",
+    planned: false,
+    image: "/news/1-7.png",
+    imageAlt: "Floé - Bloom In Your Own Way, câu chuyện ra mắt thương hiệu",
+    excerpt:
+      "Floé chính thức mở ra hành trình phụ kiện handmade độc bản, nơi mỗi thiết kế là một đóa hoa nhỏ để bạn tự tin thể hiện phong cách riêng.",
+    intro:
+      "Floé được tạo nên từ niềm tin giản dị nhưng kiên định: phụ kiện không chỉ là món đồ làm đẹp cho trang phục, mà còn là một phương tiện phản chiếu bản sắc và năng lượng của người đeo. Mỗi thiết kế là một đóa hoa độc bản dành riêng cho bạn.",
+    sections: [
+      {
+        title: "Mỗi thiết kế là một đóa hoa độc bản",
+        paragraphs: [
+          "Tại Floé, mỗi món phụ kiện được làm thủ công với tinh thần không sao chép công nghiệp. Từng cánh hoa resin, từng mối xích kim loại và hạt cườm ngọc trai đều được trau chuốt bằng tay.",
+          "Chúng mình tin rằng bạn đẹp nhất khi được nở rộ theo cách tự nhiên nhất của chính mình."
+        ]
+      },
+      {
+        title: "Sứ mệnh Your Vibe, Your Style",
+        items: [
+          "Tập trung vào tính độc bản và cảm xúc của người đeo.",
+          "Hỗ trợ tư vấn kích thước và custom design theo ý tưởng cá nhân.",
+          "Chăm chút từ sản phẩm đến trải nghiệm mở hộp Floé Box chỉn chu."
         ]
       }
     ]

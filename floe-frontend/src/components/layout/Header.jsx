@@ -25,7 +25,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav aria-label="Điều hướng chính" className="hidden items-center gap-2 text-sm lg:flex">
+        <nav aria-label="Điều hướng chính" className="hidden items-center gap-2 text-sm md:flex">
           {navigation.map((item) => {
             const isHashLink = item.to.includes("#")
             const className =
@@ -49,7 +49,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <a
             href={contact.facebookUrl}
             className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-sm font-semibold text-paper transition hover:-translate-y-0.5 hover:bg-pinkDeep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
@@ -59,7 +59,7 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 md:hidden">
           <button
             type="button"
             className="min-h-11 rounded-xl border border-line bg-white px-4 text-sm font-semibold text-ink transition hover:bg-petal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
@@ -76,7 +76,7 @@ export default function Header() {
         <nav
           id="mobile-menu"
           aria-label="Điều hướng mobile"
-          className="border-t border-line bg-paper px-5 py-4 lg:hidden"
+          className="border-t border-line bg-paper px-5 py-4 md:hidden"
         >
           <div className="grid gap-2">
             <Link

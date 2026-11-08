@@ -1,25 +1,21 @@
 # Floé Content TODO
 
-Những mục dưới đây đang thiếu dữ liệu đã duyệt. Không dùng nội dung giả để thay thế.
+## Đã Hoàn Thành (Updated for EXE201 Final)
 
-## Product Data
+- [x] Tên mẫu sản phẩm đã duyệt cho từng dòng: Móc khóa (MK-01, MK-02, MK-03), Dây chuyền (DC-01), Vòng eo (VE-01).
+- [x] Mã mẫu SKU chuẩn theo format thống nhất.
+- [x] Mức giá được duyệt (Keychains: 49.000 ₫; Choker: 130.000 ₫; Waist Chain: 160.000 ₫).
+- [x] Ghi chú chi tiết chất liệu, tone màu, kích thước, tùy chọn kiểu dáng và hướng dẫn bảo quản.
+- [x] Phân biệt rõ ràng giữa Mẫu thử nghiệm EXE201 và Bộ sưu tập hiện tại.
+- [x] Quy trình đặt hàng tiện lợi qua Messenger: chọn số lượng, ghi chú yêu cầu riêng, sao chép đơn hàng dạng text sạch đẹp.
+- [x] Chăm sóc khách hàng & FAQ 6 chủ đề chính xác thực.
+- [x] Timeline hành trình "Behind the Bloom" 4 giai đoạn chuẩn mực.
+- [x] Trang Nhật ký & Bài viết (`/posts`) cập nhật recap tháng 10/2026 với ngôn ngữ khách quan, chân thực.
+- [x] Đầy đủ thông tin và hình ảnh chân dung của 5 thành viên sáng lập.
+- [x] Cập nhật canonical domain production và Open Graph metadata.
 
-- Tên mẫu sản phẩm đã duyệt cho từng dòng đang bán: Móc khóa, Vòng eo.
-- Mã mẫu sản phẩm theo format Floé muốn dùng.
-- Ghi chú chất liệu/màu sắc đã xác nhận cho từng mẫu.
-- Trạng thái hiển thị nếu Floé muốn công bố: có sẵn, đặt custom, sắp ra mắt.
-- URL bài đăng Facebook cụ thể cho từng mẫu nếu muốn dẫn inquiry theo mẫu.
+## Những Mục Cần Lưu Ý & Quyết Định Khi Mở Rộng Sau EXE201
 
-## Remaining Product And Team Content
-
-- Ảnh sản phẩm thật theo từng SKU khi Floé muốn mở catalog chi tiết.
-- Ảnh close-up chất liệu: hạt, charm, hoa, dây, chi tiết thủ công.
-- Tên, vai trò mô tả ngắn đã duyệt cho 4 thành viên đang có ảnh.
-- Ảnh và thông tin đã duyệt cho thành viên thứ năm.
-- URL bài đăng Facebook cụ thể cho từng tile social nếu muốn dẫn tới post riêng thay vì fanpage.
-
-## Business Decisions
-
-- Domain production cuối cùng để cập nhật canonical URL và sitemap.
-- Có hỏi ngân sách dự kiến trong custom brief hay không.
-- Có chính sách nào đã duyệt để công bố không. Nếu chưa, không thêm shipping, return, warranty.
+- Bổ sung thêm ảnh chụp close-up chất liệu chi tiết khi có đợt chụp studio mới.
+- Thiết lập domain custom riêng nếu Floé tách khỏi subdomain vercel.app.
+- Xác định biểu phí vận chuyển liên tỉnh chính thức sau khi ký kết hợp đồng với đối tác giao vận.
