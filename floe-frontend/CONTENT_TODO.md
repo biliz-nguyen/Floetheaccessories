@@ -1,9 +1,13 @@
 # Floé Content TODO
 
-## Đã Hoàn Thành (Updated for EXE201 Final)
+## Đã Hoàn Thành (Updated for EXE201 Final & Distinct Product Expansion)
 
-- [x] Tên mẫu sản phẩm đã duyệt cho từng dòng: Móc khóa (MK-01, MK-02, MK-03), Dây chuyền (DC-01), Vòng eo (VE-01).
-- [x] Mã mẫu SKU chuẩn theo format thống nhất.
+- [x] **Tái cấu trúc danh mục theo Nguyên tắc: 1 Thiết Kế Vật Lý = 1 Thẻ Sản Phẩm:** Loại bỏ việc nhân bản thẻ sản phẩm theo màu sắc hoặc góc chụp.
+- [x] **Hợp nhất biến thể Nova Keychain (MK-01):** Quy tụ 4 phiên bản màu thực tế (Tím xanh ombre, Nâu tím mauve, Đỏ ruby, Trắng ngọc trai) vào 1 thẻ duy nhất với bộ chọn swatch màu sắc tương tác trong Quick View.
+- [x] **Tách biệt Kho Lưu Trữ Thiết Kế (Design Archive):** Đưa mẫu vòng cổ `Lunara Choker (DC-01)` vào tab riêng "Lưu trữ thiết kế EXE201", gắn nhãn lưu trữ lịch sử, không mở bán trực tiếp mà hướng dẫn tư vấn custom qua Messenger.
+- [x] **Tái thiết kế trang Cửa hàng (`/shop`):** Bố cục 3 cột editorial thoáng đãng, ảnh sản phẩm lớn sắc nét, huy hiệu tinh tế, hệ thống tab danh mục hiển thị số lượng chính xác tuyệt đối (3 sản phẩm mở bán + 1 thiết kế lưu trữ).
+- [x] **Sửa lỗi bộ lọc thử nghiệm:** Khắc phục triệt để lỗi bộ lọc "trial" hiển thị 0 sản phẩm trước đây.
+- [x] Tên mẫu sản phẩm và SKU chuẩn hóa: `Nova Keychain (MK-01)`, `Móc khóa hoa hồng phấn (MK-02)`, `Elune Waist Chain (VE-01)`, `Lunara Choker (DC-01 - Lưu trữ)`.
 - [x] Mức giá được duyệt (49.000 ₫ đồng nhất theo phê duyệt hiện tại).
 - [x] Ghi chú chi tiết chất liệu, tone màu, kích thước, tùy chọn kiểu dáng và hướng dẫn bảo quản.
 - [x] Phân biệt rõ ràng giữa Mẫu thử nghiệm EXE201 và Bộ sưu tập hiện tại.

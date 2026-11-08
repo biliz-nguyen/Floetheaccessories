@@ -4,37 +4,49 @@ Tài liệu ghi nhận nguồn gốc và trạng thái xác thực của toàn b
 
 ---
 
-## 1. Dữ liệu Sản phẩm & Thư viện Hình ảnh Thực tế (Real Product Photography)
+## 1. Dữ liệu Thiết Kế Sản Phẩm Độc Bản (Distinct Physical Product Designs)
 
-Toàn bộ ảnh sản phẩm được trích xuất từ thư mục ảnh gốc Google Drive của dự án (`ẢNH SẢN PHẨM` và `BOOTH/FINAL`), được tối ưu hóa chuẩn định dạng WebP hiện đại:
+Toàn bộ sản phẩm được phân loại nghiêm ngặt theo **cấu trúc thiết kế vật lý độc bản (1 thiết kế = 1 thẻ sản phẩm)**. Các phiên bản màu sắc (variants) được tích hợp trong bộ chọn màu bên trong chi tiết sản phẩm, không nhân bản thành nhiều thẻ trùng lặp:
 
-- **Nova Keychain (MK-01):**
-  - Trạng thái: Mẫu thử nghiệm (Prototype) ghi nhận trong báo cáo EXE201 và mở bán tại booth.
-  - Giá duyệt: 49.000 ₫.
-  - Ảnh thực tế: 7 góc chụp chân thực bao gồm:
-    - Ảnh chính: Hoa lan tím xanh ombre viền xích bạc phối trên quai túi da.
-    - Cận cảnh: Macro hoa lan xanh resin bóng, nhụy ngọc trai, vòng cườm và khuyên bấm.
-    - Phối túi xách: Phối túi kẹp nách xanh pastel kèm điện thoại dạo phố.
-    - Phiên bản Studio hoa đỏ: Đính charm "Made With Love", khoen tròn & chuỗi hạt.
-    - Phối túi da metallic: Móc hoa lan đỏ trên quai túi hobo metallic.
-    - Phiên bản hoa trắng: Cánh hoa trắng ngọc trai, đính khuyên xỏ bạc.
-    - Cặp hoa studio: Chụp cạnh nhau trên nền gạch trắng studio.
-- **Móc khóa hoa hồng (MK-02):**
-  - Trạng thái: Bộ sưu tập hiện tại.
-  - Giá duyệt: 49.000 ₫.
-  - Ảnh thực tế: Cánh hoa hồng phấn đổ khuôn thủ công phối trên quai túi phao thắt nơ.
-- **Nova Keychain Nâu Tím (MK-03):**
-  - Trạng thái: Bộ sưu tập hiện tại.
-  - Giá duyệt: 49.000 ₫.
-  - Ảnh thực tế: Hoa resin tông nâu tím mauve trầm kết hợp hạt ngọc và xích kim loại trên túi phao trắng.
-- **Elune Waist Chain (VE-01):**
-  - Trạng thái: Bộ sưu tập hiện tại.
-  - Giá duyệt: 49.000 ₫ (đồng bộ với catalog hiện tại).
-  - Ảnh thực tế: 4 ảnh chụp trên người mẫu diện đầm hồng pastel, cận cảnh hoa hồng nhạt và chuỗi hạt buông rủ.
-- **Lunara Choker (DC-01 - Lưu trữ Mẫu thử nghiệm):**
-  - Trạng thái: Mẫu thử nghiệm ban đầu trong báo cáo EXE201.
-  - Ảnh thực tế: Bộ 4 ảnh chân thực trích xuất từ Google Drive gồm ảnh studio, cận cảnh khóa xích, ảnh người mẫu chụp lookbook đầm ren và ảnh tại quán cafe.
-- **Thư viện Styled with Floé (`/media/lifestyle/`):**
+### A. Danh mục Mở bán Chính thức (Active Orderable Catalog - 3 Thiết kế)
+
+1. **Nova Keychain (MK-01) — Móc khóa hoa lan resin đính khuyên & cườm:**
+   - Trạng thái: Mẫu thử nghiệm EXE201 tiêu biểu, mở bán chính thức.
+   - Giá duyệt: 49.000 ₫.
+   - Cấu trúc: Hoa lan hồ điệp đổ khuôn resin bóng gương, bấm khoen mắt cáo (grommets), đính kim băng/khuyên xỏ, nhụy ngọc trai, chuỗi cườm hạt ngọc/đá thả, khóa càng cua.
+   - 4 Phiên bản màu sắc thực tế:
+     - *Tím xanh ombre:* Bản gốc lookbook phối túi xanh pastel.
+     - *Nâu tím mauve:* Tone trầm cổ điển phối xích kim loại kép.
+     - *Đỏ ruby:* Đính khoen tròn, kim băng charm "Made With Love" và ngọc trai.
+     - *Trắng ngọc trai:* Hoa lan trắng đính khuyên xỏ bạc và chuỗi cườm buông rủ.
+   - Thư viện ảnh: 7 ảnh góc chụp & phối đồ thực tế.
+
+2. **Móc khóa hoa hồng phấn (MK-02) — Floé Rose Bag Charm:**
+   - Trạng thái: Bộ sưu tập hiện tại.
+   - Giá duyệt: 49.000 ₫.
+   - Cấu trúc: Cánh hoa hồng tạo hình đa tầng mềm mại (khác biệt cấu trúc hoa lan), hạt ngọc trai nhân tạo chìm, xích bạc mảnh đính charm nơ, khoen tròn split-ring và móc càng cua.
+   - Phiên bản màu: Hồng phấn pastel.
+   - Thư viện ảnh: Bộ ảnh chụp thực tế trên túi phao thắt nơ.
+
+3. **Elune Waist Chain (VE-01) — Vòng eo hoa thủ công chuỗi xích đa tầng:**
+   - Trạng thái: Bộ sưu tập hiện tại.
+   - Giá duyệt: 49.000 ₫.
+   - Cấu trúc: Dòng phụ kiện vòng eo (waist chain belt), chuỗi xích kim loại đa tầng 75 cm + 15 cm xích nối mở rộng, mặt hoa resin hồng nhạt viền ren trắng và các chuỗi ngọc trai giọt nước rủ mềm mại.
+   - Phiên bản màu: Hồng pastel ánh bạc.
+   - Thư viện ảnh: 4 ảnh chụp trên người mẫu diện đầm pastel và các chi tiết cận cảnh.
+
+### B. Khu vực Lưu trữ Thiết kế (Design Archive - 1 Thiết kế Lịch sử)
+
+4. **Lunara Choker (DC-01) — Vòng cổ hoa lan ruy băng & chuỗi cườm:**
+   - Trạng thái: Lưu trữ thiết kế EXE201 (`isArchived: true` / Đã ngừng mở bán đại trà).
+   - Giá tham chiếu: 130.000 ₫ (giá báo cáo lịch sử, hiện không bán trực tiếp).
+   - Cấu trúc: Vòng cổ choker ôm sát cổ, mặt hoa lan tím lavender viền ren satin, dây cườm hạt thủy tinh đính ngọc trai, ruy băng kép và khóa càng cua mở rộng 34 cm + 6 cm.
+   - Thư viện ảnh: Bộ 4 ảnh studio, cận cảnh khóa sau, ảnh người mẫu lookbook và ảnh dạo phố cafe.
+   - Chức năng: Lưu trữ tư liệu học thuật, hỗ trợ đặt biến thể tương tự qua Custom Design.
+
+---
+
+### C. Thư viện Phong cách Styled with Floé (`/media/lifestyle/`)
   - Trích xuất 100% từ đợt chụp lookbook và sự kiện gian hàng pop-up thực tế tại FPT University. Bao gồm các bộ ảnh:
     - `styled-cafe-lookbook.webp`: Người mẫu diện outfit dạo phố cùng túi metallic và Nova Keychain tại cafe.
     - `styled-handbag-blue-orchid.webp`: Phối Nova Keychain xanh trên túi kẹp nách pastel.

@@ -7,45 +7,48 @@ import { contact, ctaLabels, externalLinkProps } from "../../data/siteContent.js
 export default function ProductGrid({ products, onQuickView }) {
   if (products.length === 0) {
     return (
-      <div className="rounded-2xl border border-line bg-white p-4 md:p-5">
-        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+      <div className="rounded-3xl border border-line bg-white p-6 md:p-8 shadow-print">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-2xl font-display text-ink">{productContentStatus.emptyTitle}</h2>
+            <h2 className="text-3xl font-display text-ink">{productContentStatus.emptyTitle}</h2>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-inkMuted">
               {productContentStatus.emptyDescription}
             </p>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="flex flex-col gap-2.5 sm:flex-row">
             <a
-              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-ink px-4 text-sm font-semibold text-paper transition hover:bg-ink/90"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl bg-ink px-5 text-sm font-semibold text-paper transition hover:bg-pinkDeep"
               href={contact.facebookUrl}
               {...externalLinkProps}
             >
               {ctaLabels.viewLatestSamples}
             </a>
             <Link
-              className="inline-flex min-h-10 items-center justify-center rounded-xl border border-ink/15 px-4 text-sm font-semibold text-ink transition hover:bg-petal"
-              to="#shop-category-tabs"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-line bg-paper px-5 text-sm font-semibold text-ink transition hover:bg-petal"
+              to="/custom"
             >
-              Khám phá dòng sản phẩm
+              Đặt làm theo yêu cầu riêng
             </Link>
           </div>
         </div>
 
-        <div className="mt-5 grid grid-cols-2 gap-2 md:max-w-3xl md:gap-3">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:max-w-2xl">
           {categories.map((category) => (
-            <article key={category.id} className="overflow-hidden rounded-xl border border-line bg-white">
-              <div className="aspect-[4/3] bg-petal">
+            <article key={category.id} className="overflow-hidden rounded-2xl border border-line bg-paperWarm p-4">
+              <div className="aspect-[4/3] overflow-hidden rounded-xl bg-petal">
                 <img
                   src={category.image}
                   alt={category.imageAlt}
-                  className="h-full w-full object-contain p-1.5"
+                  className="h-full w-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <div className="p-2 md:p-3">
-                <p className="text-clamp-1 text-xs font-semibold text-ink md:text-sm">
+              <div className="mt-3">
+                <p className="text-base font-semibold text-ink">
                   {category.label}
+                </p>
+                <p className="mt-1 text-xs text-inkMuted">
+                  {category.supportingIdea}
                 </p>
               </div>
             </article>
@@ -56,9 +59,13 @@ export default function ProductGrid({ products, onQuickView }) {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 2xl:grid-cols-5">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} onQuickView={onQuickView} />
+        <ProductCard
+          key={product.designId || product.id}
+          product={product}
+          onQuickView={onQuickView}
+        />
       ))}
     </div>
   )
